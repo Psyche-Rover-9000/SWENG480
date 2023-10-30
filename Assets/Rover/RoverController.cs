@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class RoverController : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 150.0f;
 
     private Rigidbody2D rover;
     private Animator animator;
