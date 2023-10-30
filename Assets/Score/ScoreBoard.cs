@@ -9,8 +9,13 @@ using UnityEngine;
  * 
  * Created 10/27/2023
  * 
- * changelog: none yet.
+ * changelog: 
+ * Jacob Meyer 10/30/2023: changed adjustScore to public to allow elements to update the score.
+ * changed adjustScore to return the total score at conclusion.
  */
+
+//connect to this with using static ScoreBoard;
+
 public class ScoreBoard : MonoBehaviour
 {
     private int scoreValue = 0;             //the total score of the player. do not mess with this outside this program.
@@ -21,7 +26,7 @@ public class ScoreBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        updateScore();
+        UpdateScore();
     }
 
     // Update is called once per frame
@@ -31,7 +36,7 @@ public class ScoreBoard : MonoBehaviour
     }
 
     //This method will update the score element of the UI
-    void updateScore()
+    void UpdateScore()
     {
         int score = scoreValue;     //this will hold the temporary score to be checked.
 
@@ -44,9 +49,10 @@ public class ScoreBoard : MonoBehaviour
     }
 
     //This method will add the given int to the score and then update the UI. Use this method to add or subtract score.
-    void adjustScore(int valueToAdd)
+    public int adjustScore(int valueToAdd)
     {
         scoreValue += valueToAdd;
-        updateScore();
+        UpdateScore();
+        return scoreValue;
     }
 }
