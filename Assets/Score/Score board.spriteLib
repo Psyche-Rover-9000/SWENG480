@@ -1,0 +1,414 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: NASA digit 1
+    m_Hash: 1029827923
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: NASA digits_0
+      m_Hash: 322988098
+      m_Sprite: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_1
+      m_Hash: 608655572
+      m_Sprite: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_2
+      m_Hash: 1028524398
+      m_Sprite: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_3
+      m_Hash: 172571128
+      m_Sprite: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_4
+      m_Hash: 338537563
+      m_Sprite: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_5
+      m_Hash: 589995213
+      m_Sprite: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_6
+      m_Hash: 975424887
+      m_Sprite: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_7
+      m_Hash: 220528097
+      m_Sprite: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_8
+      m_Hash: 496754800
+      m_Sprite: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_9
+      m_Hash: 714920166
+      m_Sprite: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: NASA digit 2
+    m_Hash: 610843881
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: NASA digits_0
+      m_Hash: 322988098
+      m_Sprite: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_1
+      m_Hash: 608655572
+      m_Sprite: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_2
+      m_Hash: 1028524398
+      m_Sprite: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_3
+      m_Hash: 172571128
+      m_Sprite: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_4
+      m_Hash: 338537563
+      m_Sprite: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_5
+      m_Hash: 589995213
+      m_Sprite: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_6
+      m_Hash: 975424887
+      m_Sprite: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_7
+      m_Hash: 220528097
+      m_Sprite: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_8
+      m_Hash: 496754800
+      m_Sprite: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_9
+      m_Hash: 714920166
+      m_Sprite: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: NASA digit 3
+    m_Hash: 326077567
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: NASA digits_0
+      m_Hash: 322988098
+      m_Sprite: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_1
+      m_Hash: 608655572
+      m_Sprite: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_2
+      m_Hash: 1028524398
+      m_Sprite: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_3
+      m_Hash: 172571128
+      m_Sprite: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_4
+      m_Hash: 338537563
+      m_Sprite: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_5
+      m_Hash: 589995213
+      m_Sprite: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_6
+      m_Hash: 975424887
+      m_Sprite: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_7
+      m_Hash: 220528097
+      m_Sprite: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_8
+      m_Hash: 496754800
+      m_Sprite: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_9
+      m_Hash: 714920166
+      m_Sprite: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: NASA digit 4
+    m_Hash: 218831324
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: NASA digits_0
+      m_Hash: 322988098
+      m_Sprite: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_1
+      m_Hash: 608655572
+      m_Sprite: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_2
+      m_Hash: 1028524398
+      m_Sprite: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_3
+      m_Hash: 172571128
+      m_Sprite: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_4
+      m_Hash: 338537563
+      m_Sprite: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_5
+      m_Hash: 589995213
+      m_Sprite: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_6
+      m_Hash: 975424887
+      m_Sprite: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_7
+      m_Hash: 220528097
+      m_Sprite: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_8
+      m_Hash: 496754800
+      m_Sprite: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_9
+      m_Hash: 714920166
+      m_Sprite: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: NASA digit 5
+    m_Hash: 973875530
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: NASA digits_0
+      m_Hash: 322988098
+      m_Sprite: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_1
+      m_Hash: 608655572
+      m_Sprite: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_2
+      m_Hash: 1028524398
+      m_Sprite: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_3
+      m_Hash: 172571128
+      m_Sprite: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_4
+      m_Hash: 338537563
+      m_Sprite: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_5
+      m_Hash: 589995213
+      m_Sprite: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_6
+      m_Hash: 975424887
+      m_Sprite: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_7
+      m_Hash: 220528097
+      m_Sprite: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_8
+      m_Hash: 496754800
+      m_Sprite: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_9
+      m_Hash: 714920166
+      m_Sprite: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: NASA digit 6
+    m_Hash: 587561200
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: NASA digits_0
+      m_Hash: 322988098
+      m_Sprite: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1401270106, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_1
+      m_Hash: 608655572
+      m_Sprite: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -459918300, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_2
+      m_Hash: 1028524398
+      m_Sprite: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 486190899, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_3
+      m_Hash: 172571128
+      m_Sprite: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -334804831, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_4
+      m_Hash: 338537563
+      m_Sprite: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1829758450, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_5
+      m_Hash: 589995213
+      m_Sprite: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -426822143, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_6
+      m_Hash: 975424887
+      m_Sprite: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1427021852, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_7
+      m_Hash: 220528097
+      m_Sprite: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1311037443, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_8
+      m_Hash: 496754800
+      m_Sprite: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2048424012, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    - m_Name: NASA digits_9
+      m_Hash: 714920166
+      m_Sprite: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 450157744, guid: a8b0691aa4d21d24db10d31a3bd598c5,
+        type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638340198723754731
+  m_Version: 1
