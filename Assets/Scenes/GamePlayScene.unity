@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -367,7 +367,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1745429127}
-  - {fileID: 1682692364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &330585547
@@ -1018,6 +1017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1682692364}
   - component: {fileID: 1682692365}
+  - component: {fileID: 1682692366}
   m_Layer: 0
   m_Name: GameMusic
   m_TagString: Untagged
@@ -1034,11 +1034,11 @@ Transform:
   m_GameObject: {fileID: 1682692363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8706696, y: -0.42716038, z: 9.797048}
+  m_LocalPosition: {x: -0.8706696, y: 0.5728396, z: -0.20295238}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 330585546}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1682692365
 AudioSource:
@@ -1137,6 +1137,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1682692366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682692363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f019eb69fcbead499b25b8dc0698ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mmMusic: {fileID: 0}
+  gameMusic: {fileID: 0}
 --- !u!4 &1745429127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4679335038647299996, guid: c6b4c222024b6a347a7f78c3307d5d27,
@@ -1215,6 +1229,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1682692364}
   - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
