@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 150
+  scoreboard: {fileID: 0}
 --- !u!95 &5663974856082621700
 Animator:
   serializedVersion: 5
@@ -158,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2517175588407236617}
   m_Layer: 0
-  m_Name: car
+  m_Name: rover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
