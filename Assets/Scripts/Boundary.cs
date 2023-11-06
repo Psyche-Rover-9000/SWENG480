@@ -15,8 +15,8 @@ public class Boundary : MonoBehaviour
     void LateUpdate()
     {
         Vector3 viewPOS = transform.position;
-        viewPOS.x = Mathf.Clamp(viewPOS.x, screenBounds.x, screenBounds.x * -1);
-        viewPOS.y = Mathf.Clamp(viewPOS.y, screenBounds.y, screenBounds.y * -1);
+        viewPOS.x = Mathf.Clamp(viewPOS.x, screenBounds.x, screenBounds.x );
+        viewPOS.y = Mathf.Clamp(viewPOS.y, screenBounds.y, screenBounds.y );
         transform.position = viewPOS;
     }
 }
