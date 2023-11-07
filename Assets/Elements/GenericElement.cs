@@ -1,28 +1,25 @@
-/*
-* Author: Jacob Meyer, Reid McMullin
-* 
-* This is the class that all element classes cinherit from.
-* 
-* 
-* Created 10/30/2023
-* 
-* changelog: 
-*   
-*/
-
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 
 public abstract class GenericElement : MonoBehaviour
 {
-    protected int value = 0;                        // the points this element is worth. hard code this in the Start() of actual element.
-    public Sprite[] thisElementVariance;            // the sprites that this element can have.
+    /*
+ * Author: Jacob Meyer
+ * 
+ * this is the class that all element classes conect to. 
+ * 
+ * Created 10/30/2023
+ * 
+ * changelog: 11/5/2023 - added soundEffect to play a audio clip when the element is colected.
+ */
 
+    protected int value = 0;                          //the points this element has. hard code this in the Start() of actual element.
+    public Sprite[] thisElementVariance;           //the sprites that this element can have.
+    public AudioSource soundEffect;                  //the sound effect of the element colecting.
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +47,7 @@ public abstract class GenericElement : MonoBehaviour
     //the method to run when the Element is colected. it will return the value of the element.
     public int getElement()
     {
+        soundEffect.Play();
         gameObject.SetActive(false);
         return value;
     }

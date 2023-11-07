@@ -40,8 +40,11 @@ public class RoverController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Animate();
+        if (!PauseMenu.isPaused)
+        {
+            Move();
+            Animate();
+        }
     }
 
     /*
