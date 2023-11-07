@@ -10,6 +10,7 @@ public class RoverController : MonoBehaviour
 {
     // external objects assigned from inspector
     public GameObject scoreboard;
+    public AudioSource collectSFX;                 
 
     // external objects assigned from script 
     //private GameObject element;
@@ -107,6 +108,7 @@ public class RoverController : MonoBehaviour
                 
                 //int val = element.GetComponent<GenericElement>().getElement();
                 int val = collision.gameObject.GetComponent<GenericElement>().getElement();
+                collectSFX.Play();
                 scoreboard.GetComponent<ScoreBoard>().adjustScore(val);   
             }
         }
