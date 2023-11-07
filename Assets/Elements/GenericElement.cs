@@ -1,24 +1,27 @@
+/*
+* Author: Jacob Meyer, Reid McMullin
+* 
+* This is the class that all element classes cinherit from.
+* 
+* 
+* Created 10/30/2023
+* 
+* changelog: 
+*   
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 
 public abstract class GenericElement : MonoBehaviour
 {
-    /*
- * Author: Jacob Meyer
- * 
- * this is the class that all element classes conect to. 
- * 
- * Created 10/30/2023
- * 
- * changelog: none yet.
- */
-
-    protected int value = 0;                          //the points this element has. hard code this in the Start() of actual element.
-    public Sprite[] thisElementVariance;           //the sprites that this element can have.
+    protected int value = 0;                        // the points this element is worth. hard code this in the Start() of actual element.
+    public Sprite[] thisElementVariance;            // the sprites that this element can have.
 
 
     // Start is called before the first frame update
