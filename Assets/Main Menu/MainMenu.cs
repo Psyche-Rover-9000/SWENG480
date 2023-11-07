@@ -8,6 +8,6 @@ public class MainMenu : MonoBehaviour
     //Load Scene
     public void play()
     {
-        SceneManager.LoadScene("GamePlayScene");                                                                   
+        SceneManager.LoadScene("CaveScene");                                                                   
     }
 }
