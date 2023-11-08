@@ -23,6 +23,9 @@ public class RoverController : MonoBehaviour
     private Animator animator;
     private Vector2 input;
 
+    //pop up related objects and variables
+    public GameObject popUpPanel;
+    bool ironIsNew = true;
 
     // Start is called before the first frame update
     void Start()
@@ -43,8 +46,11 @@ public class RoverController : MonoBehaviour
     {
         if (!PauseMenu.isPaused)
         {
-            Move();
-            Animate();
+            if (!PopUp.popUpActive)
+            {
+                Move();
+                Animate();
+            }
         }
     }
 
@@ -109,7 +115,23 @@ public class RoverController : MonoBehaviour
                 //int val = element.GetComponent<GenericElement>().getElement();
                 int val = collision.gameObject.GetComponent<GenericElement>().getElement();
                 collectSFX.Play();
-                scoreboard.GetComponent<ScoreBoard>().adjustScore(val);   
+                scoreboard.GetComponent<ScoreBoard>().adjustScore(val);
+
+                //pop up menu:
+                //once there are more elements, add switch here for which element is being collected.
+                //within iron block of switch:
+                if (ironIsNew)
+                {
+                    PopUp.popUpActive = true; //pauses controls
+                    popUpPanel.gameObject.SetActive(true); //pop up appears
+                    popUpPanel.transform.Find("IronImage").gameObject.SetActive(true); //iron image on pop up appears 
+                    popUpPanel.transform.Find("IronText").gameObject.SetActive(true); //iron text on pop up appears
+
+                    //add iron info to pause menu
+
+                    ironIsNew = false; //
+                }
+
             }
         }
     }

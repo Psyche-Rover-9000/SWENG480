@@ -59,12 +59,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Rover\RoverController.cs" />
-    <Compile Include="Assets\Main Menu\Music.cs" />
     <Compile Include="Assets\Elements\Iron\IronScript.cs" />
     <Compile Include="Assets\Score\ScoreBoard.cs" />
     <Compile Include="Assets\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Elements\GenericElement.cs" />
+    <Compile Include="Assets\Music\SoundManager.cs" />
     <Compile Include="Assets\Pause Menu\PauseMenu.cs" />
+    <Compile Include="Assets\PopUp\PopUp.cs" />
     <Compile Include="Assets\Scripts\Boundary.cs" />
   </ItemGroup>
   <ItemGroup>
