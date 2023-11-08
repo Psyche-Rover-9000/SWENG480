@@ -19,7 +19,7 @@ public abstract class GenericElement : MonoBehaviour
 
     protected int value = 0;                          //the points this element has. hard code this in the Start() of actual element.
     public Sprite[] thisElementVariance;           //the sprites that this element can have.
-    public AudioSource soundEffect;                  //the sound effect of the element colecting.
+   // public AudioSource soundEffect;                  //the sound effect of the element colecting.
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public abstract class GenericElement : MonoBehaviour
     //the method to run when the Element is colected. it will return the value of the element.
     public int getElement()
     {
-        soundEffect.Play();
+        //soundEffect.Play();   //sound effect is now played in RoverController.cs
         gameObject.SetActive(false);
         return value;
     }
