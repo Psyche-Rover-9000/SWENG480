@@ -55,4 +55,10 @@ public class ScoreBoard : MonoBehaviour
         UpdateScore();
         return scoreValue;
     }
+
+    // getter method for current score
+    public int getScore()
+    {
+        return scoreValue;
+    }
 }
