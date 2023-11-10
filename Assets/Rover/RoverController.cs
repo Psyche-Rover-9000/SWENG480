@@ -124,12 +124,12 @@ public class RoverController : MonoBehaviour
                 {
                     PopUp.popUpActive = true; //pauses controls
                     popUpPanel.gameObject.SetActive(true); //pop up appears
-                    popUpPanel.transform.Find("IronImage").gameObject.SetActive(true); //iron image on pop up appears 
-                    popUpPanel.transform.Find("IronText").gameObject.SetActive(true); //iron text on pop up appears
+                    popUpPanel.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
 
-                    //add iron info to pause menu
+                    //add iron info button to pause menu
+                    popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_iron").Find("IronButton").gameObject.SetActive(true);
 
-                    ironIsNew = false; //
+                    ironIsNew = false; 
                 }
 
             }

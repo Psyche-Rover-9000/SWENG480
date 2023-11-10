@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject popUp;
     public static bool isPaused;
 
     // Start is called before the first frame update
@@ -49,5 +50,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("PsycheRover9000");
         isPaused = false;
+    }
+
+    public void IronInfo()
+    {
+        popUp.gameObject.SetActive(true); //pop up appears
+        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
+        popUp.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
     }
 }
