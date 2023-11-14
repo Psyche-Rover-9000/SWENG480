@@ -12,16 +12,15 @@ public class RoverController : MonoBehaviour
     public GameObject scoreboard;
     public AudioSource collectSFX;                 
 
-    // external objects assigned from script 
-    //private GameObject element;
-
     // rover related objects and settings
     private Rigidbody2D rover;
     private float speed_init;
     private float speed;
-    private int boost;
+    private float boost;
     private Animator animator;
     private Vector2 input;
+    private bool boost_enabled;
+    private ScoreBoard score;
 
     //pop up related objects and variables
     public GameObject popUpPanel;
@@ -33,17 +32,25 @@ public class RoverController : MonoBehaviour
         // init objects
         rover = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        score = scoreboard.GetComponent<ScoreBoard>();
 
         // init settings
         speed_init = 150.0f;
-        boost = 5;
         speed = speed_init;
+        boost = speed_init * 5;
+        boost_enabled = false;
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!boost_enabled && score.getScore() >= 10)
+        {
+            boost_enabled = true;
+        }
+
+
         if (!PauseMenu.isPaused)
         {
             if (!PopUp.popUpActive)
@@ -64,23 +71,22 @@ public class RoverController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
+        // speed boost while pressing space
+        if (boost_enabled && Input.GetKeyDown(KeyCode.Space)) 
+        {
+            speed = boost;
+        }
+        if (boost_enabled && Input.GetKeyUp(KeyCode.Space))
+        {
+            speed = speed_init;
+        }
+
+
         // this helps ensure no animation change in rover for no input
-        if (horizontal == 0 && vertical == 0) 
+        if (horizontal == 0 && vertical == 0)
         {
             rover.velocity = Vector2.zero;
             return;
-        }
-
-        // speed boost while pressing space
-        // BUG - able to lock into boost when input has 2 directions at once
-        // QUICKFIX - added "spped_init" so rover doesn't keep getting faster
-        if (Input.GetKeyDown(KeyCode.Space) && speed == speed_init) 
-        {
-            speed *= boost;
-        }
-        if (Input.GetKeyUp(KeyCode.Space) && speed > speed_init)
-        {
-            speed /= boost;
         }
 
         // move the rover
@@ -115,7 +121,7 @@ public class RoverController : MonoBehaviour
                 //int val = element.GetComponent<GenericElement>().getElement();
                 int val = collision.gameObject.GetComponent<GenericElement>().getElement();
                 collectSFX.Play();
-                scoreboard.GetComponent<ScoreBoard>().adjustScore(val);
+                score.adjustScore(val);
 
                 //pop up menu:
                 //once there are more elements, add switch here for which element is being collected.
@@ -136,31 +142,5 @@ public class RoverController : MonoBehaviour
         }
     }
 
-
-    /*
-     * Probablly don't need.
-     *
-     
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Element")
-        {
-            element = collision.gameObject;
-        }
-    }
-
-
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.Equals(element))
-        {
-            element = null;
-        }
-    }
-
-
-    */
 
 }
