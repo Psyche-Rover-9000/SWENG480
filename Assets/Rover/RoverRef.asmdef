@@ -1,0 +1,19 @@
+{
+    "name": "RoverRef",
+    "rootNamespace": "",
+    "references": [
+        "GUID:07c9ddfdf9b3203429f7b951406764df",
+        "GUID:4cca113a1988294458f8d0bd884e73ff",
+        "GUID:3b6355169c3e1c44c9bc2f4c2dc5e4bf",
+        "GUID:cb25c0c974ae7af49a4561fbe1df929d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

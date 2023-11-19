@@ -59,13 +59,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Rover\RoverController.cs" />
-    <Compile Include="Assets\Score\ScoreBoard.cs" />
+    <Compile Include="Assets\Elements\Iron\IronScript.cs" />
     <Compile Include="Assets\Main Menu\MainMenu.cs" />
+    <Compile Include="Assets\Elements\GenericElement.cs" />
     <Compile Include="Assets\Music\SoundManager.cs" />
     <Compile Include="Assets\Scripts\LevelMove_Ref.cs" />
-    <Compile Include="Assets\Pause Menu\PauseMenu.cs" />
-    <Compile Include="Assets\PopUp\PopUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -883,9 +881,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="EleTester.csproj">
-      <Project>{1D54A665-19E5-4370-D96F-A22BA47C0AEF}</Project>
-      <Name>EleTester</Name>
+    <ProjectReference Include="PopUpRef.csproj">
+      <Project>{6133C75D-187E-0C51-F4DF-0CC75C649315}</Project>
+      <Name>PopUpRef</Name>
+    </ProjectReference>
+    <ProjectReference Include="ScoreRef.csproj">
+      <Project>{F74F0766-58D0-C6F9-87EA-F861E6934C8D}</Project>
+      <Name>ScoreRef</Name>
+    </ProjectReference>
+    <ProjectReference Include="RoverRef.csproj">
+      <Project>{CB7C4B13-47B7-3E13-3986-14C4499D8F56}</Project>
+      <Name>RoverRef</Name>
+    </ProjectReference>
+    <ProjectReference Include="PauseRef.csproj">
+      <Project>{26634855-A9F5-1FBD-4AD4-3E4E8E9CFEF5}</Project>
+      <Name>PauseRef</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
