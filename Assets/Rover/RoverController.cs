@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.Tilemaps;
 
@@ -25,6 +27,12 @@ public class RoverController : MonoBehaviour
     //pop up related objects and variables
     public GameObject popUpPanel;
     bool ironIsNew = true;
+
+    //score prgress objects
+    public TextMeshProUGUI currentScoreText;
+    public TextMeshProUGUI scoreNeededText;
+    public Image fill;
+    public int scoreNeeded = 10; //initialized for first upgrade
 
     // Start is called before the first frame update
     void Start()
@@ -122,6 +130,11 @@ public class RoverController : MonoBehaviour
                 int val = collision.gameObject.GetComponent<GenericElement>().getElement();
                 collectSFX.Play();
                 score.adjustScore(val);
+
+                //update score progress in pause menu
+                currentScoreText.text = $"Current Score is {score.getScore()}";
+                scoreNeededText.text = $"{scoreNeeded-score.getScore()} Point(s) Needed to Upgrade!";
+                fill.fillAmount = (float) score.getScore() / scoreNeeded;
 
                 //pop up menu:
                 //once there are more elements, add switch here for which element is being collected.
