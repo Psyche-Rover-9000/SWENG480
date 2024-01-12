@@ -27,12 +27,17 @@ public class RoverController : MonoBehaviour
     //pop up related objects and variables
     public GameObject popUpPanel;
     bool ironIsNew = true;
+    public GameObject upgradePopUp;
+    bool boostUnlocked = false;
 
-    //score prgress objects
+    //score progress objects and variables
     public TextMeshProUGUI currentScoreText;
     public TextMeshProUGUI scoreNeededText;
     public Image fill;
-    public int scoreNeeded = 10; //initialized for first upgrade
+    public int scoreNeeded = 10; //initialized for first upgrade (boost)
+
+    //upgrades in pause menu objects and variables
+    public TextMeshProUGUI nextUpgradeText;
 
     // Start is called before the first frame update
     void Start()
@@ -135,6 +140,22 @@ public class RoverController : MonoBehaviour
                 currentScoreText.text = $"Current Score is {score.getScore()}";
                 scoreNeededText.text = $"{scoreNeeded-score.getScore()} Point(s) Needed to Upgrade!";
                 fill.fillAmount = (float) score.getScore() / scoreNeeded;
+
+                //new upgrade pop up
+                if (score.getScore() > 10 && !boostUnlocked) //boost unlocked when score is 10
+                {
+                    //pop up
+                    PopUp.popUpActive = true; //pauses controls
+                    upgradePopUp.gameObject.SetActive(true); //pop up appears
+                    upgradePopUp.transform.Find("BoostInfo").gameObject.SetActive(true); //boost related info on pop up appears 
+                    boostUnlocked = true;
+
+                    //change progress bar goal for next upgrade ********
+
+                    //update upgrades in pause menu
+                    nextUpgradeText.text = "something else"; //change to whatever next upgrade is
+                    popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("BoostInfo").gameObject.SetActive(true);
+                }
 
                 //pop up menu:
                 //once there are more elements, add switch here for which element is being collected.
