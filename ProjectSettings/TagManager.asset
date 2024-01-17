@@ -44,3 +44,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 256795697
+    locked: 0
+  - name: Rover
+    uniqueID: 3533419923
+    locked: 0
+  - name: Walls
+    uniqueID: 2598958555
+    locked: 0
+  - name: Props
+    uniqueID: 4291729383
+    locked: 0

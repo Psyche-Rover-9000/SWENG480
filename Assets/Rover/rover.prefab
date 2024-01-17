@@ -451,6 +451,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreboard: {fileID: 783870624415924182}
   collectSFX: {fileID: 1613954982159974280}
+  popUpPanel: {fileID: 0}
+  upgradePopUp: {fileID: 0}
+  currentScoreText: {fileID: 0}
+  scoreNeededText: {fileID: 0}
+  fill: {fileID: 0}
+  scoreNeeded: 10
+  nextUpgradeText: {fileID: 0}
 --- !u!61 &4646755558803927039
 BoxCollider2D:
   m_ObjectHideFlags: 0
