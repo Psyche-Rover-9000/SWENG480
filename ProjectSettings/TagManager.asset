@@ -47,12 +47,18 @@ TagManager:
   - name: Ground
     uniqueID: 256795697
     locked: 0
-  - name: Rover
-    uniqueID: 3533419923
-    locked: 0
   - name: Walls
     uniqueID: 2598958555
     locked: 0
+  - name: Rover
+    uniqueID: 3533419923
+    locked: 0
   - name: Props
     uniqueID: 4291729383
+    locked: 0
+  - name: False Wall
+    uniqueID: 2483617549
+    locked: 0
+  - name: UI
+    uniqueID: 833054177
     locked: 0
