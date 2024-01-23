@@ -89,10 +89,12 @@ public class RoverController : MonoBehaviour
         if (boost_enabled && Input.GetKeyDown(KeyCode.Space)) 
         {
             speed = boost;
+            animator.SetBool("Boost", true);
         }
         if (boost_enabled && Input.GetKeyUp(KeyCode.Space))
         {
             speed = speed_init;
+            animator.SetBool("Boost", false);
         }
 
 
@@ -100,8 +102,9 @@ public class RoverController : MonoBehaviour
         if (horizontal == 0 && vertical == 0)
         {
             rover.velocity = Vector2.zero;
+            animator.SetBool("Boost", false);
             animator.enabled = false;
-            animator.StopPlayback();
+            //animator.StopPlayback();
             return;
         }
 

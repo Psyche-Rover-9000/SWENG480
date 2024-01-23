@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rover2RightB_0
+      name: Rover2RightB_3
       rect:
         serializedVersion: 2
         x: 7
@@ -131,7 +131,7 @@ TextureImporter:
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rover2RightB_1
+      name: Rover2RightB_2
       rect:
         serializedVersion: 2
         x: 127
@@ -152,7 +152,7 @@ TextureImporter:
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rover2RightB_2
+      name: Rover2RightB_1
       rect:
         serializedVersion: 2
         x: 7
@@ -173,7 +173,7 @@ TextureImporter:
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rover2RightB_3
+      name: Rover2RightB_0
       rect:
         serializedVersion: 2
         x: 127
@@ -194,7 +194,7 @@ TextureImporter:
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,9 +218,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Rover2RightB_0: -1308759846
-      Rover2RightB_1: -73882090
-      Rover2RightB_2: 641516034
-      Rover2RightB_3: 420014087
+      Rover2RightB_1: -1308759846
+      Rover2RightB_2: -73882090
+      Rover2RightB_3: -1308759846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
