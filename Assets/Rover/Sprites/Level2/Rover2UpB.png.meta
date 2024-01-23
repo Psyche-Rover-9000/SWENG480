@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rover2UpB_0
+      name: Rover2UpB_3
       rect:
         serializedVersion: 2
         x: 15
@@ -131,7 +131,7 @@ TextureImporter:
         width: 90
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rover2UpB_1
+      name: Rover2UpB_2
       rect:
         serializedVersion: 2
         x: 135
@@ -152,7 +152,7 @@ TextureImporter:
         width: 90
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rover2UpB_2
+      name: Rover2UpB_1
       rect:
         serializedVersion: 2
         x: 15
@@ -173,7 +173,7 @@ TextureImporter:
         width: 90
         height: 112
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rover2UpB_3
+      name: Rover2UpB_0
       rect:
         serializedVersion: 2
         x: 135
@@ -194,7 +194,7 @@ TextureImporter:
         width: 90
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rover2UpB_0: -1814746263
-      Rover2UpB_1: -1704965340
-      Rover2UpB_2: 1637323502
-      Rover2UpB_3: -160172377
+      Rover2UpB_0: -160172377
+      Rover2UpB_1: 1637323502
+      Rover2UpB_2: -1704965340
+      Rover2UpB_3: -1814746263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
