@@ -102,7 +102,7 @@ public class RoverController : MonoBehaviour
         if (horizontal == 0 && vertical == 0)
         {
             rover.velocity = Vector2.zero;
-            animator.SetBool("Boost", false);
+            //animator.SetBool("Boost", false);
             animator.enabled = false;
             //animator.StopPlayback();
             return;
