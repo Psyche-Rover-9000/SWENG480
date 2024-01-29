@@ -60,7 +60,13 @@ public class RoverController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (rover_level == 1 && score.getScore() >= 10)
+        {
+            rover_level = 2;
+            anim_lvl = "L2_";
+        }
+
         if (rover_level == 2 && score.getScore() >= 20)
         {
             rover_level = 3;
@@ -144,6 +150,7 @@ public class RoverController : MonoBehaviour
                 //new upgrade pop up
                 if (score.getScore() > 10 && !boostUnlocked) //boost unlocked when score is 10
                 {
+                    
                     //pop up
                     PopUp.popUpActive = true; //pauses controls
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
@@ -155,10 +162,6 @@ public class RoverController : MonoBehaviour
                     //update upgrades in pause menu
                     nextUpgradeText.text = "something else"; //change to whatever next upgrade is
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("BoostInfo").gameObject.SetActive(true);
-
-                    // upgrade rover level
-                    rover_level = 2;
-                    anim_lvl = "L2_";
 
                 }
 
