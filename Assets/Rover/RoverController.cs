@@ -21,8 +21,9 @@ public class RoverController : MonoBehaviour
     private float boost;
     private Animator animator;
     private Vector2 input;
-    private bool boost_enabled;
+    private int rover_level;
     private ScoreBoard score;
+    private string anim_lvl;
 
     //pop up related objects and variables
     public GameObject popUpPanel;
@@ -51,26 +52,35 @@ public class RoverController : MonoBehaviour
         speed_init = 150.0f;
         speed = speed_init;
         boost = speed_init * 5;
-        boost_enabled = false;
+        rover_level = 1;
+        anim_lvl = "L1_";
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!boost_enabled && score.getScore() >= 10)
+
+        if (rover_level == 1 && score.getScore() >= 10)
         {
-            boost_enabled = true;
-            animator.SetTrigger("Level2");
+            rover_level = 2;
+            anim_lvl = "L2_";
         }
 
+        if (rover_level == 2 && score.getScore() >= 20)
+        {
+            rover_level = 3;
+            anim_lvl = "L3_";
+
+        }
+
+        
 
         if (!PauseMenu.isPaused)
         {
             if (!PopUp.popUpActive)
             {
                 Move();
-                Animate();
             }
         }
     }
@@ -85,46 +95,35 @@ public class RoverController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        // speed boost while pressing space
-        if (boost_enabled && Input.GetKeyDown(KeyCode.Space)) 
-        {
-            speed = boost;
-            animator.SetBool("Boost", true);
-        }
-        if (boost_enabled && Input.GetKeyUp(KeyCode.Space))
-        {
-            speed = speed_init;
-            animator.SetBool("Boost", false);
-        }
 
-
-        // this helps ensure no animation change in rover for no input
+        // without motion input, idle without changing direction
         if (horizontal == 0 && vertical == 0)
         {
+            animator.Play(anim_lvl + "idle");
             rover.velocity = Vector2.zero;
-            //animator.SetBool("Boost", false);
-            animator.enabled = false;
-            //animator.StopPlayback();
             return;
         }
 
-        // move the rover
-        animator.enabled = true;
+        // move and animate rover to match input
         input = new Vector2(horizontal, vertical);
-        rover.velocity = input * speed * Time.fixedDeltaTime;
-        
- 
-    }
-
-    /*
-     * Animate
-     *  Changes the rover sprite for directional movement using the animator component.
-     */
-    private void Animate()
-    {
         animator.SetFloat("MovementX", input.x);
         animator.SetFloat("MovementY", input.y);
+        if(rover_level > 1 && Input.GetKey(KeyCode.Space))
+        {
+            speed = boost;
+            animator.Play(anim_lvl + "boost");
+        }
+        else
+        {
+            speed = speed_init;
+            animator.Play(anim_lvl + "move");
+        }
+        rover.velocity = input * speed * Time.fixedDeltaTime;
+        
+
+
     }
+
 
     /*
      * OnCollisionStay2D
@@ -151,6 +150,7 @@ public class RoverController : MonoBehaviour
                 //new upgrade pop up
                 if (score.getScore() > 10 && !boostUnlocked) //boost unlocked when score is 10
                 {
+                    
                     //pop up
                     PopUp.popUpActive = true; //pauses controls
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
@@ -162,6 +162,7 @@ public class RoverController : MonoBehaviour
                     //update upgrades in pause menu
                     nextUpgradeText.text = "something else"; //change to whatever next upgrade is
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("BoostInfo").gameObject.SetActive(true);
+
                 }
 
                 //pop up menu:
