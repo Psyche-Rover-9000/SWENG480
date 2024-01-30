@@ -9,6 +9,20 @@ public class PauseMenu : MonoBehaviour
     public GameObject popUp;
     public static bool isPaused;
 
+    //creates an instance of the pause menu
+    private static PauseMenu pauseInstance = null;
+    private void Awake()
+    {
+        if (pauseInstance == null)
+        {
+            pauseInstance = this; //set instance
+            DontDestroyOnLoad(this.gameObject); //used to keep the same object in all scenes
+            return;
+        }
+        Destroy(this.gameObject); //destroy duplicate pause menu objects when returning to MainWorld
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {

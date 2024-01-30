@@ -40,8 +40,23 @@ public class RoverController : MonoBehaviour
     //upgrades in pause menu objects and variables
     public TextMeshProUGUI nextUpgradeText;
 
-    // Start is called before the first frame update
-    void Start()
+
+	//creates an instance of the player rover
+    private static RoverController roverInstance = null;
+    private void Awake()
+    {
+        if (roverInstance == null)
+        {
+            roverInstance = this; //set rover instance
+            DontDestroyOnLoad(this.gameObject); //used to keep the same rover object in all scenes
+            return;
+        }
+        Destroy(this.gameObject); //destroy duplicate rover objects when returning to MainWorld
+
+    }
+
+// Start is called before the first frame update
+void Start()
     {
         // init objects
         rover = GetComponent<Rigidbody2D>();
