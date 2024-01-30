@@ -65,6 +65,7 @@
     <Compile Include="Assets\Elements\Tungsten\TungstenScript.cs" />
     <Compile Include="Assets\Elements\GenericElement.cs" />
     <Compile Include="Assets\Music\SoundManager.cs" />
+    <Compile Include="Assets\RandomObject.cs" />
     <Compile Include="Assets\Scripts\LevelMove_Ref.cs" />
     <Compile Include="Assets\Pause Menu\PauseMenu.cs" />
     <Compile Include="Assets\PopUp\PopUp.cs" />
