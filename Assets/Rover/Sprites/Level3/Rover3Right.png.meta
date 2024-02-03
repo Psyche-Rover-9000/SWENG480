@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 135
+        y: 136
         width: 105
         height: 64
       alignment: 0
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68012f30d5c18e840a4849e1a2d72d9d
-      internalID: -1878146623
+      spriteID: 3981549de3a2b9d4da21cd2a336f717b
+      internalID: -1158945525
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebcce66d83c172745a3eadd52ffbb545
-      internalID: -753497291
+      spriteID: f163d30114740204e9330187e9c244b5
+      internalID: -1148567878
       vertices: []
       indices: 
       edges: []
@@ -168,8 +168,8 @@ TextureImporter:
       name: Rover3Right_1
       rect:
         serializedVersion: 2
-        x: 11
-        y: 15
+        x: 12
+        y: 16
         width: 105
         height: 64
       alignment: 0
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10c707c65a2e10e4caf5f991aa00092b
-      internalID: -1286478594
+      spriteID: 0c105361e9bd3974e94c0540e70db969
+      internalID: -1639145978
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
       name: Rover3Right_0
       rect:
         serializedVersion: 2
-        x: 131
+        x: 132
         y: 15
         width: 105
         height: 64
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a40f20580d5ba4845bab29366a86f7f8
-      internalID: 1316927477
+      spriteID: 62ce49fa63cabc5428de58963cf84eaa
+      internalID: -2060834319
       vertices: []
       indices: 
       edges: []
@@ -209,7 +209,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 3362cb88b6282434182e271cada4d8eb
+    spriteID: ddd550a93579f064bacfe5f037ffc386
     internalID: 0
     vertices: []
     indices: 
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rover3Right_0: 1316927477
-      Rover3Right_1: -1286478594
-      Rover3Right_2: -753497291
-      Rover3Right_3: -1878146623
+      Rover3Right_0: -2060834319
+      Rover3Right_1: -1639145978
+      Rover3Right_2: -1148567878
+      Rover3Right_3: -1158945525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

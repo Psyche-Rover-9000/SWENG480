@@ -131,14 +131,14 @@ TextureImporter:
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77f2495169e9a24448d6e8c7df0a90a5
-      internalID: 53141796
+      spriteID: 8fcea4b7708117c4da73caaab2c8d523
+      internalID: 1213429005
       vertices: []
       indices: 
       edges: []
@@ -152,14 +152,14 @@ TextureImporter:
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0eec31171023d5b4da77f842e8821b7b
-      internalID: -1058790578
+      spriteID: 8aa5b1293e864924089de877f2530c52
+      internalID: -1911102708
       vertices: []
       indices: 
       edges: []
@@ -173,14 +173,14 @@ TextureImporter:
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f3b53f3492f564cb588e559a2f99a0
-      internalID: 246222276
+      spriteID: 75150d3141613f1419258c366e29c3d9
+      internalID: 1840965276
       vertices: []
       indices: 
       edges: []
@@ -189,19 +189,19 @@ TextureImporter:
       name: Rover3LeftB_0
       rect:
         serializedVersion: 2
-        x: 125
+        x: 124
         y: 15
         width: 109
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a08980d882413a48861b48c74fa8235
-      internalID: -1556273645
+      spriteID: 16c8f0d9de5287c43be5d4a1cd3edad1
+      internalID: 285954507
       vertices: []
       indices: 
       edges: []
@@ -209,7 +209,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: df418b20bb08de247ba10753dd6b8e25
+    spriteID: f53a4ab38eecbf64abe4841af267dc92
     internalID: 0
     vertices: []
     indices: 
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rover3LeftB_0: -1556273645
-      Rover3LeftB_1: 246222276
-      Rover3LeftB_2: -1058790578
-      Rover3LeftB_3: 53141796
+      Rover3LeftB_0: 285954507
+      Rover3LeftB_1: 1840965276
+      Rover3LeftB_2: -1911102708
+      Rover3LeftB_3: 1213429005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -126,7 +126,7 @@ TextureImporter:
       name: Rover3RightB_3
       rect:
         serializedVersion: 2
-        x: 8
+        x: 7
         y: 135
         width: 109
         height: 64
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffa158543572f404b8b80fd753245922
-      internalID: -1120876390
+      spriteID: 41e2256853bc36e41949367200486ac2
+      internalID: -1789735812
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 972cfa751972f21408499a58241058cb
-      internalID: 1154526358
+      spriteID: 92a87d443ef00f747987a965a6813ddb
+      internalID: -736723265
       vertices: []
       indices: 
       edges: []
@@ -169,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7
-        y: 15
+        y: 16
         width: 109
         height: 64
       alignment: 0
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfbeb287b5f16944ab6f5bae0615b88f
-      internalID: -1999010883
+      spriteID: 8d32ad3ca748e284192ea6433b54156e
+      internalID: -1964162884
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b4cacbe8c9fd54e838ccfd5d07d974
-      internalID: -522342111
+      spriteID: 6186d880d87e0b042a0409d78c4e6acb
+      internalID: 814955289
       vertices: []
       indices: 
       edges: []
@@ -209,7 +209,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: cd225d799fb67ec43b6db42f5c9ebfa0
+    spriteID: ccc71942f7e86f54980482240c46500f
     internalID: 0
     vertices: []
     indices: 
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Rover3RightB_0: -522342111
-      Rover3RightB_1: -1999010883
-      Rover3RightB_2: 1154526358
-      Rover3RightB_3: -1120876390
+      Rover3RightB_0: 814955289
+      Rover3RightB_1: -1964162884
+      Rover3RightB_2: -736723265
+      Rover3RightB_3: -1789735812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
