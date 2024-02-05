@@ -151,7 +151,7 @@ void Start()
         {
             if (Input.GetKey(KeyCode.E))
             {
-                
+
                 //int val = element.GetComponent<GenericElement>().getElement();
                 int val = collision.gameObject.GetComponent<GenericElement>().getElement();
                 collectSFX.Play();
@@ -159,13 +159,13 @@ void Start()
 
                 //update score progress in pause menu
                 currentScoreText.text = $"Current Score is {score.getScore()}";
-                scoreNeededText.text = $"{scoreNeeded-score.getScore()} Point(s) Needed to Upgrade!";
-                fill.fillAmount = (float) score.getScore() / scoreNeeded;
+                scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
                 //new upgrade pop up
                 if (score.getScore() > 10 && !boostUnlocked) //boost unlocked when score is 10
                 {
-                    
+
                     //pop up
                     PopUp.popUpActive = true; //pauses controls
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
@@ -192,12 +192,28 @@ void Start()
                     //add iron info button to pause menu
                     popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_iron").Find("IronButton").gameObject.SetActive(true);
 
-                    ironIsNew = false; 
+                    ironIsNew = false;
                 }
 
             }
         }
     }
+    /*
+     * Checks if objects in game have tag "Breakable"
+     * If so the Rover can Destroy these objects and move on
+     * 
+     */
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (score.getScore() > 15)
+        {
+            if (other.gameObject.tag == "Breakable")
 
+            {
+                Destroy(other.gameObject);
+            }
+
+        }
+    }
 
 }
