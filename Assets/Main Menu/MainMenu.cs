@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
-{
-    //Load Scene
-    public void play()
+{   
+    public void play() // load game
     {
-        SceneManager.LoadScene("MainWorld");                                                                   
+        SceneManager.LoadScene("Disclaimer"); //load disclaimer scene
     }
 }
