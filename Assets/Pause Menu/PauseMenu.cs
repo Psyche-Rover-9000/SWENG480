@@ -72,4 +72,32 @@ public class PauseMenu : MonoBehaviour
         popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
         popUp.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
     }
+
+    public void SapphireInfo()
+    {
+        popUp.gameObject.SetActive(true); //pop up appears
+        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
+        popUp.transform.Find("SapphireInfo").gameObject.SetActive(true); //sapphire info on pop up appears 
+    }
+
+    public void TungstenInfo()
+    {
+        popUp.gameObject.SetActive(true); //pop up appears
+        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
+        popUp.transform.Find("TungstenInfo").gameObject.SetActive(true); //tungsten info on pop up appears 
+    }
+
+    public void AluminumInfo()
+    {
+        popUp.gameObject.SetActive(true); //pop up appears
+        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
+        popUp.transform.Find("AluminumInfo").gameObject.SetActive(true); //aluminum info on pop up appears 
+    }
+
+    public void SulfurInfo()
+    {
+        popUp.gameObject.SetActive(true); //pop up appears
+        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
+        popUp.transform.Find("SulfurInfo").gameObject.SetActive(true); //sulfur info on pop up appears 
+    }
 }

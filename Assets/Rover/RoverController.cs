@@ -28,6 +28,10 @@ public class RoverController : MonoBehaviour
     //pop up related objects and variables
     public GameObject popUpPanel;
     bool ironIsNew = true;
+    bool sapphireIsNew = true;
+    bool tungstenIsNew = true;
+    bool aluminumIsNew = true;
+    bool sulfurIsNew = true;
     public GameObject upgradePopUp;
     bool boostUnlocked = false;
 
@@ -45,7 +49,7 @@ public class RoverController : MonoBehaviour
     private static RoverController roverInstance = null;
     private void Awake()
     {
-        if (roverInstance == null)
+        if (roverInstance == null) //the first time main world loads
         {
             roverInstance = this; //set rover instance
             DontDestroyOnLoad(this.gameObject); //used to keep the same rover object in all scenes
@@ -180,21 +184,90 @@ void Start()
 
                 }
 
-                //pop up menu:
-                //once there are more elements, add switch here for which element is being collected.
-                //within iron block of switch:
-                if (ironIsNew)
+                //new element pop ups:
+                switch (val) //switch determines which element was just picked up
                 {
-                    PopUp.popUpActive = true; //pauses controls
-                    popUpPanel.gameObject.SetActive(true); //pop up appears
-                    popUpPanel.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
+                    case 3: // iron was picked up
+                        {
+                            if (ironIsNew) //pop ups only appear the first time an element is picked up
+                            {
+                                PopUp.popUpActive = true; //pauses controls
+                                popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
 
-                    //add iron info button to pause menu
-                    popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_iron").Find("IronButton").gameObject.SetActive(true);
+                                //add iron info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_iron").Find("IronButton").gameObject.SetActive(true);
 
-                    ironIsNew = false; 
+                                ironIsNew = false;
+                            }
+                            break;
+                        }
+
+                    case 5: // tungsten was picked up
+                        {
+                            if (tungstenIsNew)
+                            {
+                                PopUp.popUpActive = true; //pauses controls
+                                popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("TungstenInfo").gameObject.SetActive(true); //tungsten info on pop up appears 
+
+                                //add tungsten info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_tungsten").Find("TungstenButton").gameObject.SetActive(true);
+
+                                tungstenIsNew = false;
+                            }
+                            break;
+                        }
+
+                    case 10: // sapphire was picked up
+                        {
+                            if (sapphireIsNew)
+                            {
+                                PopUp.popUpActive = true; //pauses controls
+                                popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("SapphireInfo").gameObject.SetActive(true); //sapphire info on pop up appears 
+
+                                //add sapphire info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_sapphire").Find("SapphireButton").gameObject.SetActive(true);
+
+                                sapphireIsNew = false;
+                            }
+                            break;
+                        }
+
+                    case 0: // aluminum was picked up   **********update value**********
+                        {
+                            if (aluminumIsNew)
+                            {
+                                PopUp.popUpActive = true; //pauses controls
+                                popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("AluminumInfo").gameObject.SetActive(true); //aluminum info on pop up appears 
+
+                                //add aluminum info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_aluminum").Find("AluminumButton").gameObject.SetActive(true);
+
+                                aluminumIsNew = false;
+                            }
+                            break;
+                        }
+
+                    case 1: // sulfur was picked up   **********update value**********
+                        {
+                            if (sulfurIsNew)
+                            {
+                                PopUp.popUpActive = true; //pauses controls
+                                popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("SulfurInfo").gameObject.SetActive(true); //sulfur info on pop up appears 
+
+                                //add sulfur info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_sulfur").Find("SulfurButton").gameObject.SetActive(true);
+
+                                sulfurIsNew = false;
+                            }
+                            break;
+                        }
                 }
-
+           
             }
         }
     }

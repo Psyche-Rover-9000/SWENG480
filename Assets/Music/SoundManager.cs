@@ -11,6 +11,14 @@ public class Music : MonoBehaviour
     private static Music musicInstance = null;
     private void Awake()
     {
+        //ignore MainWorld duplication when music object is MenuMusic
+        if (gameObject.name == "MenuMusic")
+        {
+            Destroy(gameObject.transform.parent.Find("GameMusic"));
+            return;
+        }
+
+        //MainWorld duplication control
         if (musicInstance == null)
         {
             musicInstance = this; //set instance
