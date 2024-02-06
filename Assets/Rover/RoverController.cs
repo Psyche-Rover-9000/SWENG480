@@ -93,7 +93,13 @@ void Start()
 
         }
 
-        
+        if (rover_level == 3 && score.getScore() >= 30)
+        {
+            rover_level = 4;
+            anim_lvl = "L4_";
+
+        }
+
 
         if (!PauseMenu.isPaused)
         {
