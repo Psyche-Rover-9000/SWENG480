@@ -1,0 +1,280 @@
+fileFormatVersion: 2
+guid: f5f96bfb473520544b10e7b33b6cbda6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boulder_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15.372463, y: 4.469528}
+        - {x: 13.370016, y: 9.624599}
+        - {x: 9.406378, y: 13.999409}
+        - {x: 3.838747, y: 15.891911}
+        - {x: -4.487301, y: 15.891907}
+        - {x: -12.254552, y: 11.130356}
+        - {x: -15.675723, y: 4.460129}
+        - {x: -15.603933, y: -5.0509872}
+        - {x: -12.216774, y: -11.080921}
+        - {x: -5.0277615, y: -15.4595375}
+        - {x: 4.257612, y: -15.343098}
+        - {x: 12.053751, y: -11.135853}
+        - {x: 15.351448, y: -5.3520355}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3847e5d3911e034b957ed40b69c3e9d
+      internalID: -184483767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boulder_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15.372463, y: 4.469528}
+        - {x: 13.370016, y: 9.624599}
+        - {x: 9.406378, y: 13.999409}
+        - {x: 3.838747, y: 15.891911}
+        - {x: -4.487301, y: 15.891907}
+        - {x: -12.254552, y: 11.130356}
+        - {x: -15.675723, y: 4.460129}
+        - {x: -15.603933, y: -5.0509872}
+        - {x: -12.216774, y: -11.080921}
+        - {x: -5.0277615, y: -15.4595375}
+        - {x: 4.257612, y: -15.343098}
+        - {x: 12.053751, y: -11.135853}
+        - {x: 15.351448, y: -5.3520355}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b341f642946844a916d98cdbed72b6
+      internalID: -1199074209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boulder_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15.372463, y: 4.469528}
+        - {x: 13.370016, y: 9.624599}
+        - {x: 9.406378, y: 13.999409}
+        - {x: 3.838747, y: 15.891911}
+        - {x: -4.487301, y: 15.891907}
+        - {x: -12.254552, y: 11.130356}
+        - {x: -15.675723, y: 4.460129}
+        - {x: -15.603933, y: -5.0509872}
+        - {x: -12.216774, y: -11.080921}
+        - {x: -5.0277615, y: -15.4595375}
+        - {x: 4.257612, y: -15.343098}
+        - {x: 12.053751, y: -11.135853}
+        - {x: 15.351448, y: -5.3520355}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148da6af13c0a6d469153fe7cc331e39
+      internalID: -130476706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boulder_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 15.372463, y: 4.469528}
+        - {x: 13.370016, y: 9.624599}
+        - {x: 9.406378, y: 13.999409}
+        - {x: 3.838747, y: 15.891911}
+        - {x: -4.487301, y: 15.891907}
+        - {x: -12.254552, y: 11.130356}
+        - {x: -15.675723, y: 4.460129}
+        - {x: -15.603933, y: -5.0509872}
+        - {x: -12.216774, y: -11.080921}
+        - {x: -5.0277615, y: -15.4595375}
+        - {x: 4.257612, y: -15.343098}
+        - {x: 12.053751, y: -11.135853}
+        - {x: 15.351448, y: -5.3520355}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e693a7ebe2f2cab499146f16b6ed3865
+      internalID: -1188746970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0c7da05a2755b644bbf63c7833a4d851
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boulder_0: -184483767
+      boulder_1: -1199074209
+      boulder_2: -130476706
+      boulder_3: -1188746970
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
