@@ -7,14 +7,12 @@ public class RandomObject : MonoBehaviour
 
     public GameObject[] myObjects;
 
-    void Update()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
         {
             int randomIndex = Random.Range(0, myObjects.Length);
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), Random.Range(-5, 5));
-
-            Instantiate(myObjects[randomIndex], randomSpawnPosition, Quaternion.identity);
+            
+            Instantiate(myObjects[randomIndex], transform.position, Quaternion.identity);
         }
     }
 }
