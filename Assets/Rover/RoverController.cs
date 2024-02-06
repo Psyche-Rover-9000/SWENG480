@@ -12,7 +12,8 @@ public class RoverController : MonoBehaviour
 {
     // external objects assigned from inspector
     public GameObject scoreboard;
-    public AudioSource collectSFX;                 
+    public AudioSource collectSFX;
+    public GameObject light;
 
     // rover related objects and settings
     private Rigidbody2D rover;
@@ -89,7 +90,14 @@ void Start()
 
         }
 
-        
+        if (rover_level == 3 && score.getScore() >= 30)
+        {
+            rover_level = 4;
+            anim_lvl = "L4_";
+
+        }
+
+
 
         if (!PauseMenu.isPaused)
         {
