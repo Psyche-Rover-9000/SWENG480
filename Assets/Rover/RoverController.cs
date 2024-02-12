@@ -32,8 +32,12 @@ public class RoverController : MonoBehaviour
     bool tungstenIsNew = true;
     bool aluminumIsNew = true;
     bool sulfurIsNew = true;
+
     public GameObject upgradePopUp;
     bool boostUnlocked = false;
+    bool transmitterUnlocked = false;
+    bool flashlightUnlocked = false;
+    bool grabberUnlocked = false;
 
     //score progress objects and variables
     public TextMeshProUGUI currentScoreText;
@@ -103,9 +107,12 @@ void Start()
 
         if (!PauseMenu.isPaused)
         {
-            if (!PopUp.popUpActive)
+            if (!PopUp.popUpElementActive)
             {
-                Move();
+                if (!PopUp.popUpUpgradeActive)
+                {
+                    Move();
+                }
             }
         }
     }
@@ -169,36 +176,94 @@ void Start()
 
                 //update score progress in pause menu
                 currentScoreText.text = $"Current Score is {score.getScore()}";
-                scoreNeededText.text = $"{scoreNeeded-score.getScore()} Point(s) Needed to Upgrade!";
-                fill.fillAmount = (float) score.getScore() / scoreNeeded;
-
-                //new upgrade pop up
-                if (score.getScore() > 10 && !boostUnlocked) //boost unlocked when score is 10
+                if (score.getScore() < 40) // maximum upgrade score
                 {
-                    
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    fill.fillAmount = (float)score.getScore() / scoreNeeded;
+                }
+
+                //new upgrade pop up + pause menu
+                if (score.getScore() >= 10 && !boostUnlocked) //boost unlocked when score is 10
+                {  
                     //pop up
-                    PopUp.popUpActive = true; //pauses controls
+                    PopUp.popUpUpgradeActive = true; //pauses controls
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
                     upgradePopUp.transform.Find("BoostInfo").gameObject.SetActive(true); //boost related info on pop up appears 
                     boostUnlocked = true;
 
-                    //change progress bar goal for next upgrade ********
+                    //change progress bar goal for next upgrade
+                    scoreNeeded = 20;
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
                     //update upgrades in pause menu
-                    nextUpgradeText.text = "something else"; //change to whatever next upgrade is
+                    nextUpgradeText.text = "Transmitter"; //change to next upgrade
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("BoostInfo").gameObject.SetActive(true);
 
                 }
+                if (score.getScore() >= 20 && !transmitterUnlocked) //transmitter unlocked when score is 20***
+                {
+                    //pop up
+                    PopUp.popUpUpgradeActive = true; //pauses controls
+                    upgradePopUp.gameObject.SetActive(true); //pop up appears
+                    upgradePopUp.transform.Find("TransmitterInfo").gameObject.SetActive(true); //transmitter related info on pop up appears 
+                    transmitterUnlocked = true;
 
-                //new element pop ups:
+                    //change progress bar goal for next upgrade
+                    scoreNeeded = 30;
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    fill.fillAmount = (float)score.getScore() / scoreNeeded;
+
+                    //update upgrades in pause menu
+                    nextUpgradeText.text = "Flashlight"; //change to whatever next upgrade is
+                    popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("TransmitterInfo").gameObject.SetActive(true);
+                }
+                if (score.getScore() >= 30 && !flashlightUnlocked) //flashlight unlocked when score is 30***
+                {
+                    //pop up
+                    PopUp.popUpUpgradeActive = true; //pauses controls
+                    upgradePopUp.gameObject.SetActive(true); //pop up appears
+                    upgradePopUp.transform.Find("FlashlightInfo").gameObject.SetActive(true); //flashlight related info on pop up appears 
+                    flashlightUnlocked = true;
+
+                    //change progress bar goal for next upgrade
+                    scoreNeeded = 40;
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    fill.fillAmount = (float)score.getScore() / scoreNeeded;
+
+                    //update upgrades in pause menu
+                    nextUpgradeText.text = "Grabber Claw"; //change to whatever next upgrade is
+                    popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("FlashlightInfo").gameObject.SetActive(true);
+                }
+                if (score.getScore() >= 40 && !grabberUnlocked) //grabber claw unlocked when score is 40***
+                {
+                    //pop up
+                    PopUp.popUpUpgradeActive = true; //pauses controls
+                    upgradePopUp.gameObject.SetActive(true); //pop up appears
+                    upgradePopUp.transform.Find("GrabberInfo").gameObject.SetActive(true); //grabber claw related info on pop up appears 
+                    grabberUnlocked = true;
+
+                    //change progress bar goal for next upgrade
+                    scoreNeeded = 0;
+                    scoreNeededText.text = $"All upgrades complete!";
+                    scoreNeededText.transform.position = new Vector3(525f, 230f, 0f);
+                    fill.fillAmount = 100;
+
+                    //update upgrades in pause menu
+                    nextUpgradeText.text = "All upgrades complete!"; //change to whatever next upgrade is
+                    popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("GrabberInfo").gameObject.SetActive(true);
+                }
+
+                //new element pop ups + pause menu
                 switch (val) //switch determines which element was just picked up
                 {
                     case 3: // iron was picked up
                         {
                             if (ironIsNew) //pop ups only appear the first time an element is picked up
                             {
-                                PopUp.popUpActive = true; //pauses controls
+                                PopUp.popUpElementActive = true; //pauses controls
                                 popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
                                 popUpPanel.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
 
                                 //add iron info button to pause menu
@@ -213,8 +278,9 @@ void Start()
                         {
                             if (tungstenIsNew)
                             {
-                                PopUp.popUpActive = true; //pauses controls
+                                PopUp.popUpElementActive = true; //pauses controls
                                 popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
                                 popUpPanel.transform.Find("TungstenInfo").gameObject.SetActive(true); //tungsten info on pop up appears 
 
                                 //add tungsten info button to pause menu
@@ -229,8 +295,9 @@ void Start()
                         {
                             if (sapphireIsNew)
                             {
-                                PopUp.popUpActive = true; //pauses controls
+                                PopUp.popUpElementActive = true; //pauses controls
                                 popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
                                 popUpPanel.transform.Find("SapphireInfo").gameObject.SetActive(true); //sapphire info on pop up appears 
 
                                 //add sapphire info button to pause menu
@@ -245,8 +312,9 @@ void Start()
                         {
                             if (aluminumIsNew)
                             {
-                                PopUp.popUpActive = true; //pauses controls
+                                PopUp.popUpElementActive = true; //pauses controls
                                 popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
                                 popUpPanel.transform.Find("AluminumInfo").gameObject.SetActive(true); //aluminum info on pop up appears 
 
                                 //add aluminum info button to pause menu
@@ -261,8 +329,9 @@ void Start()
                         {
                             if (sulfurIsNew)
                             {
-                                PopUp.popUpActive = true; //pauses controls
+                                PopUp.popUpElementActive = true; //pauses controls
                                 popUpPanel.gameObject.SetActive(true); //pop up appears
+                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
                                 popUpPanel.transform.Find("SulfurInfo").gameObject.SetActive(true); //sulfur info on pop up appears 
 
                                 //add sulfur info button to pause menu
