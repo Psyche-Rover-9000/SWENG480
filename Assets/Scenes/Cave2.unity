@@ -12108,6 +12108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PushableBolder
       objectReference: {fileID: 0}
+    - target: {fileID: 2652319709513967820, guid: b13bd1e1960bead43bc8c986d73f084e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3463394959768141866, guid: b13bd1e1960bead43bc8c986d73f084e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12717,6 +12722,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2338928995300836885, guid: cb8f0ed9cb94d824f909993fc50b328d,
+        type: 3}
+      propertyPath: boulderMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2517175588407236617, guid: cb8f0ed9cb94d824f909993fc50b328d,
         type: 3}
       propertyPath: m_LocalPosition.x
