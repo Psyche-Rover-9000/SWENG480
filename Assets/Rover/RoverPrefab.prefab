@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 4646755558803927039}
   m_Layer: 0
   m_Name: RoverPrefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,7 +536,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreboard: {fileID: 783870624415924182}
   collectSFX: {fileID: 1613954982159974280}
-  light: {fileID: 2344995617963642436}
+  grabDistance: 1
+  boulderMask:
+    serializedVersion: 2
+    m_Bits: 64
   popUpPanel: {fileID: 0}
   upgradePopUp: {fileID: 0}
   currentScoreText: {fileID: 0}

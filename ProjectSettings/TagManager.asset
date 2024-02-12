@@ -8,6 +8,7 @@ TagManager:
   - Element
   - Popup
   - Breakable
+  - Pullable
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - PullObjects
   - 
   - 
   - 
