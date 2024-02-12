@@ -17,6 +17,7 @@ public class RoverController : MonoBehaviour
     public AudioSource collectSFX;
     public float grabDistance = 1f;
     public LayerMask boulderMask;
+    public SpriteMask flashlight;
 
     // rover objects and settings
     private Rigidbody2D rover;
@@ -29,7 +30,8 @@ public class RoverController : MonoBehaviour
     private ScoreBoard score;
     private string animationLevel;
     private float horizontal;
-    private float vertical;    
+    private float vertical;
+    private float angle;
 
     //pop up related objects and variables
     public GameObject popUpPanel;
@@ -203,6 +205,8 @@ public class RoverController : MonoBehaviour
             animator.SetFloat("MovementX", input.x);
             animator.SetFloat("MovementY", input.y);
 
+            
+
             // move rover with or without boost
             if (roverLevel > 1 && Input.GetKey(KeyCode.Space))
             {
@@ -216,6 +220,11 @@ public class RoverController : MonoBehaviour
             }
         }
         rover.velocity = input * speed * Time.fixedDeltaTime;
+
+        // move flashlight mask
+        angle = Vector2.Angle(Vector2.up, input);
+        flashlight.transform.Rotate(angle, 0, 0, Space.Self);
+        UnityEngine.Debug.Log(angle);
 
 
     }
