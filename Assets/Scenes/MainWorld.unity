@@ -10113,7 +10113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {x: -0.99, y: 0.28, z: 0}
-  rc: {fileID: 0}
 --- !u!4 &837555358
 Transform:
   m_ObjectHideFlags: 0

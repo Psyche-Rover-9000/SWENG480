@@ -32,6 +32,10 @@ public class RoverController : MonoBehaviour
     private float horizontal;
     private float vertical;
     private float angle;
+    private int level2 = 10;
+    private int level3 = 20;
+    private int level4 = 30;
+    private int level5 = 40;
 
     //pop up related objects and variables
     public GameObject popUpPanel;
@@ -100,27 +104,27 @@ public class RoverController : MonoBehaviour
     void Update()
     {
 
-        if (roverLevel == 1 && score.getScore() >= 6)
+        if (roverLevel == 1 && score.getScore() >= level2)
         {
             roverLevel = 2;
             animationLevel = "L2_";
         }
 
-        if (roverLevel == 2 && score.getScore() >= 9)
+        if (roverLevel == 2 && score.getScore() >= level3)
         {
             roverLevel = 3;
             animationLevel = "L3_";
 
         }
 
-        if (roverLevel == 3 && score.getScore() >= 12)
+        if (roverLevel == 3 && score.getScore() >= level4)
         {
             roverLevel = 4;
             animationLevel = "L4_";
 
         }
 
-        if (roverLevel == 4 && score.getScore() >= 15)
+        if (roverLevel == 4 && score.getScore() >= level5)
         {
             roverLevel = 5;
             animationLevel = "L5_";
