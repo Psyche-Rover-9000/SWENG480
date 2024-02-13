@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\Rover\RoverController.cs" />
     <Compile Include="Assets\Elements\Iron\IronScript.cs" />
+    <Compile Include="Assets\Sign.cs" />
     <Compile Include="Assets\Score\ScoreBoard.cs" />
     <Compile Include="Assets\Main Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Disclaimer.cs" />
