@@ -68,6 +68,7 @@ public class RoverController : MonoBehaviour
 
     private void Awake()
     {
+        //rover duplication management
         if (roverInstance == null) //the first time main world loads
         {
             roverInstance = this; //set rover instance
@@ -75,7 +76,6 @@ public class RoverController : MonoBehaviour
             return;
         }
         Destroy(this.gameObject); //destroy duplicate rover objects when returning to MainWorld
-
     }
 
     // Start is called before the first frame update
@@ -132,12 +132,10 @@ public class RoverController : MonoBehaviour
         {
             if (!PopUp.popUpElementActive)
             {
-
                 if (!PopUp.popUpUpgradeActive)
                 {
                     Move();
                 }
-
             }
         }
     }
