@@ -540,7 +540,7 @@ MonoBehaviour:
   grabDistance: 1
   boulderMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   flashlight: {fileID: 8193933683984935356, guid: 01383af9b992bef4ab41f1a226f36d2d,
     type: 3}
   popUpPanel: {fileID: 0}
