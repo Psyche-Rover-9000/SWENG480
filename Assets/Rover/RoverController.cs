@@ -7,23 +7,31 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.Tilemaps;
+using System.Diagnostics;
+
 
 public class RoverController : MonoBehaviour
 {
     // external objects assigned from inspector
     public GameObject scoreboard;
-    public AudioSource collectSFX;                 
+    public AudioSource collectSFX;
+    public float grabDistance = 1f;
+    public LayerMask boulderMask;
+    public SpriteMask flashlight;
 
-    // rover related objects and settings
+    // rover objects and settings
     private Rigidbody2D rover;
     private float speed_init;
     private float speed;
     private float boost;
     private Animator animator;
     private Vector2 input;
-    private int rover_level;
+    private int roverLevel;
     private ScoreBoard score;
-    private string anim_lvl;
+    private string animationLevel;
+    private float horizontal;
+    private float vertical;
+    private float angle;
 
     //pop up related objects and variables
     public GameObject popUpPanel;
@@ -48,9 +56,16 @@ public class RoverController : MonoBehaviour
     //upgrades in pause menu objects and variables
     public TextMeshProUGUI nextUpgradeText;
 
+    // interactable objects
+    private RaycastHit2D hit;
+    private GameObject boulder;
+    private float horizontalLock;
+    private float verticalLock;
+    private bool isPulling;
 
-	//creates an instance of the player rover
+    //creates an instance of the player rover
     private static RoverController roverInstance = null;
+
     private void Awake()
     {
         if (roverInstance == null) //the first time main world loads
@@ -63,8 +78,8 @@ public class RoverController : MonoBehaviour
 
     }
 
-// Start is called before the first frame update
-void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         // init objects
         rover = GetComponent<Rigidbody2D>();
@@ -75,32 +90,40 @@ void Start()
         speed_init = 150.0f;
         speed = speed_init;
         boost = speed_init * 5;
-        rover_level = 1;
-        anim_lvl = "L1_";
-        
+        roverLevel = 1;
+        animationLevel = "L1_";
+        isPulling = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (rover_level == 1 && score.getScore() >= 10)
+        if (roverLevel == 1 && score.getScore() >= 6)
         {
-            rover_level = 2;
-            anim_lvl = "L2_";
+            roverLevel = 2;
+            animationLevel = "L2_";
         }
 
-        if (rover_level == 2 && score.getScore() >= 20)
+        if (roverLevel == 2 && score.getScore() >= 9)
         {
-            rover_level = 3;
-            anim_lvl = "L3_";
+            roverLevel = 3;
+            animationLevel = "L3_";
 
         }
 
-        if (rover_level == 3 && score.getScore() >= 30)
+        if (roverLevel == 3 && score.getScore() >= 12)
         {
-            rover_level = 4;
-            anim_lvl = "L4_";
+            roverLevel = 4;
+            animationLevel = "L4_";
+
+        }
+
+        if (roverLevel == 4 && score.getScore() >= 15)
+        {
+            roverLevel = 5;
+            animationLevel = "L5_";
 
         }
 
@@ -109,10 +132,12 @@ void Start()
         {
             if (!PopUp.popUpElementActive)
             {
+
                 if (!PopUp.popUpUpgradeActive)
                 {
                     Move();
                 }
+
             }
         }
     }
@@ -123,38 +148,103 @@ void Start()
      */
     private void Move()
     {
+
         // recieve horizontal and veritcal input from user - wasd or arrows
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
+                             
+        // set raycast for finding pullable objects in the direction rover is going
+        Physics2D.queriesStartInColliders = false;
+        hit = Physics2D.Raycast(transform.position, input, grabDistance, boulderMask);
 
+        // grab boulder on shift down
+        if (roverLevel >= 5 && hit.collider != null && hit.collider.gameObject.tag == "Pullable")
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift)) 
+            {
+                // attach boulder RB to rover RB
+                boulder = hit.collider.gameObject;
+                boulder.GetComponent<FixedJoint2D>().enabled = true;
+                boulder.GetComponent<FixedJoint2D>().connectedBody = rover;
 
-        // without motion input, idle without changing direction
+                // lock in current direction and set isPulling
+                horizontalLock = animator.GetFloat("MovementX");
+                verticalLock = animator.GetFloat("MovementY");
+                isPulling = true;
+            }
+            
+        }
+
+        // release boulder on shift up
+        if (boulder != null && Input.GetKeyUp(KeyCode.LeftShift)) 
+        {
+            // detach boulder RB from rover RB
+            boulder.GetComponent<FixedJoint2D>().connectedBody = null;
+            boulder.GetComponent<FixedJoint2D>().enabled = false;
+            boulder = null;
+
+            isPulling = false;
+        }
+
+        // without motion input, idle the rover without changing direction
         if (horizontal == 0 && vertical == 0)
         {
-            animator.Play(anim_lvl + "idle");
+            animator.Play(animationLevel + "idle");
             rover.velocity = Vector2.zero;
             return;
         }
 
-        // move and animate rover to match input
+        // set 'input' to what the user entered
         input = new Vector2(horizontal, vertical);
-        animator.SetFloat("MovementX", input.x);
-        animator.SetFloat("MovementY", input.y);
-        if(rover_level > 1 && Input.GetKey(KeyCode.Space))
+
+        // set rover direction in the animator and move it on screen
+        // if pulling -> lock direction, else -> regular direction
+        if (isPulling)
         {
-            speed = boost;
-            animator.Play(anim_lvl + "boost");
+            animator.SetFloat("MovementX", horizontalLock);
+            animator.SetFloat("MovementY", verticalLock);
+
+            // limit to regular speed while pulling
+            speed = speed_init;
+            animator.Play(animationLevel + "move");
+
         }
         else
         {
-            speed = speed_init;
-            animator.Play(anim_lvl + "move");
+            animator.SetFloat("MovementX", input.x);
+            animator.SetFloat("MovementY", input.y);
+
+            
+
+            // move rover with or without boost
+            if (roverLevel > 1 && Input.GetKey(KeyCode.Space))
+            {
+                speed = boost;
+                animator.Play(animationLevel + "boost");
+            }
+            else
+            {
+                speed = speed_init;
+                animator.Play(animationLevel + "move");
+            }
         }
         rover.velocity = input * speed * Time.fixedDeltaTime;
-        
+
+        // move flashlight mask
+        angle = Vector2.Angle(Vector2.up, input);
+        flashlight.transform.Rotate(angle, 0, 0, Space.Self);
+        UnityEngine.Debug.Log(angle);
 
 
     }
+
+    // this is to draw the raycast to the "Scene" view and not show it in the "Game" view
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, (Vector2)transform.position + input * grabDistance);
+    }
+
 
 
     /*
@@ -168,7 +258,7 @@ void Start()
         {
             if (Input.GetKey(KeyCode.E))
             {
-                
+
                 //int val = element.GetComponent<GenericElement>().getElement();
                 int val = collision.gameObject.GetComponent<GenericElement>().getElement();
                 collectSFX.Play();
@@ -176,6 +266,7 @@ void Start()
 
                 //update score progress in pause menu
                 currentScoreText.text = $"Current Score is {score.getScore()}";
+
                 if (score.getScore() < 40) // maximum upgrade score
                 {
                     scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
@@ -185,6 +276,7 @@ void Start()
                 //new upgrade pop up + pause menu
                 if (score.getScore() >= 10 && !boostUnlocked) //boost unlocked when score is 10
                 {  
+
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
@@ -342,10 +434,20 @@ void Start()
                             break;
                         }
                 }
-           
+
             }
         }
+
+        /*
+        if (collision.gameObject.tag == "Pullable" && Input.GetKey(KeyCode.LeftShift))
+        {
+            boulder = collision.gameObject;
+            boulder.transform.SetParent(this.transform);
+        }
+        */
+        
     }
 
 
 }
+

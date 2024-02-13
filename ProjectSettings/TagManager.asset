@@ -8,11 +8,12 @@ TagManager:
   - Element
   - Popup
   - Breakable
+  - Pullable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PullObjects
   - Water
   - UI
   - 

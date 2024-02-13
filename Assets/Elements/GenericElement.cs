@@ -19,7 +19,8 @@ public abstract class GenericElement : MonoBehaviour
 
     protected int value = 0;                          //the points this element has. hard code this in the Start() of actual element.
     public Sprite[] thisElementVariance;           //the sprites that this element can have.
-   // public AudioSource soundEffect;                  //the sound effect of the element colecting.
+    // public AudioSource soundEffect;                  //the sound effect of the element colecting.
+    protected string element;
 
     // Start is called before the first frame update
     void Start()
