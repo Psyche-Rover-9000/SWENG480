@@ -213,8 +213,8 @@ public class RoverController : MonoBehaviour
         }
         else
         {
-            animator.SetFloat("MovementX", input.x);
-            animator.SetFloat("MovementY", input.y);
+            animator.SetFloat("MovementX", horizontal);
+            animator.SetFloat("MovementY", vertical);
 
             
 
@@ -233,9 +233,9 @@ public class RoverController : MonoBehaviour
         rover.velocity = input * speed * Time.fixedDeltaTime;
 
         // move flashlight mask
-        angle = Vector2.Angle(Vector2.up, input);
-        flashlight.transform.Rotate(angle, 0, 0, Space.Self);
-        UnityEngine.Debug.Log(angle);
+        //angle = Vector2.Angle(Vector2.up, input);
+        //flashlight.transform.Rotate(angle, 0, 0, Space.Self);
+        //UnityEngine.Debug.Log(angle);
 
 
     }
