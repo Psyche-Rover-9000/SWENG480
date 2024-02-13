@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 6670633118957929675}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.82, y: 3.62, z: 0}
+  m_LocalScale: {x: 1.7688, y: 1.8303, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,10 +63,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000011920929, y: -0.15531106}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -77,7 +77,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.23228988, y: 0.5149454}
   m_EdgeRadius: 0
 --- !u!212 &6289103631596402719
 SpriteRenderer:
@@ -143,3 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42b76a3b6ec140529099e2910bee325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBox: {fileID: 0}
+  dialogText: {fileID: 0}
+  dialog: Caution! This Cave Requires the Flashlight To See
+  playerInRange: 1
