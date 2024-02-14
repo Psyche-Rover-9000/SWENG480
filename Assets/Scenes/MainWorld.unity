@@ -16596,6 +16596,11 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5814842442063691242, guid: cb8f0ed9cb94d824f909993fc50b328d,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6085588341292316327, guid: cb8f0ed9cb94d824f909993fc50b328d,
         type: 3}
       propertyPath: m_SortingOrder
@@ -16610,6 +16615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900135569510081637, guid: cb8f0ed9cb94d824f909993fc50b328d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27073,79 +27083,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973309479}
   m_CullTransparentMesh: 1
---- !u!1001 &2017959641
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.007233049
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 147175587103116160, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163628284031106789, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelMove Cave2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7207470013705534657, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
-        type: 3}
-      propertyPath: sceneBuildIndex
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4ba3fc235bd8b407cb2025ea81be97a7, type: 3}
 --- !u!1 &2040164445
 GameObject:
   m_ObjectHideFlags: 0
@@ -28231,6 +28168,74 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133116615}
   m_CullTransparentMesh: 1
+--- !u!1001 &2336930948866122791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.007233049
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709167091786499720, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996285789485773805, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelMove Cave2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a41884f165b74994faeeb22e13f01534, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -28244,7 +28249,7 @@ SceneRoots:
   - {fileID: 2119232533}
   - {fileID: 1895482174}
   - {fileID: 1911206414}
-  - {fileID: 2017959641}
+  - {fileID: 2336930948866122791}
   - {fileID: 1376891241}
   - {fileID: 486795929}
   - {fileID: 1480402238}
