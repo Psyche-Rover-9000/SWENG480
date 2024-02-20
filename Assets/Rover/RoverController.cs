@@ -13,7 +13,12 @@ using System.Diagnostics;
 public class RoverController : MonoBehaviour
 {
     // external objects assigned from inspector
+    public SpriteRenderer roverSprite;
     public GameObject scoreboard;
+    public GameObject triangleRight;
+    public GameObject triangleLeft;
+    public GameObject triangleDown;
+    public GameObject triangleUp;
     public AudioSource collectSFX;
     public float grabDistance = 1f;
     public LayerMask boulderMask;
@@ -103,7 +108,46 @@ public class RoverController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Sprite rank = roverSprite.sprite;
+        if (roverLevel >= 4)
+        {
+            if (rank.name.Contains("Right"))
+            {
+                triangleRight.SetActive(true);
+            }
+            else
+            {
+                triangleRight.SetActive(false);
 
+            }
+            if (rank.name.Contains("Left"))
+            {
+                triangleLeft.SetActive(true);
+            }
+            else
+            {
+                triangleLeft.SetActive(false);
+
+            }
+            if (rank.name.Contains("Down"))
+            {
+                triangleDown.SetActive(true);
+            }
+            else
+            {
+                triangleDown.SetActive(false);
+
+            }
+            if (rank.name.Contains("Up"))
+            {
+                triangleUp.SetActive(true);
+            }
+            else
+            {
+                triangleUp.SetActive(false);
+
+            }
+        }
         if (roverLevel == 1 && score.getScore() >= level2)
         {
             roverLevel = 2;
