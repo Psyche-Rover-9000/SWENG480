@@ -384,7 +384,7 @@ public class RoverController : MonoBehaviour
                     //change progress bar goal for next upgrade
                     scoreNeeded = 0;
                     scoreNeededText.text = $"All upgrades complete!";
-                    scoreNeededText.transform.position = new Vector3(525f, 230f, 0f);
+                    scoreNeededText.rectTransform.position = scoreNeededText.rectTransform.position + new Vector3(0, -10, 0);
                     fill.fillAmount = 100;
 
                     //update upgrades in pause menu
