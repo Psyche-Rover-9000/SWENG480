@@ -9,7 +9,7 @@ public class SulfurScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 3;
+        value = 2;
         GenerateRandomVariance();
     }
 

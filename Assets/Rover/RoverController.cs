@@ -370,7 +370,7 @@ public class RoverController : MonoBehaviour
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
                     //update upgrades in pause menu
-                    nextUpgradeText.text = "Grabber Claw"; //change to whatever next upgrade is
+                    nextUpgradeText.text = "Grabber"; //change to whatever next upgrade is
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("FlashlightInfo").gameObject.SetActive(true);
                 }
                 if (score.getScore() >= 40 && !grabberUnlocked) //grabber claw unlocked when score is 40***
@@ -384,7 +384,7 @@ public class RoverController : MonoBehaviour
                     //change progress bar goal for next upgrade
                     scoreNeeded = 0;
                     scoreNeededText.text = $"All upgrades complete!";
-                    scoreNeededText.rectTransform.position = scoreNeededText.rectTransform.position + new Vector3(0, -10, 0);
+                    scoreNeededText.rectTransform.position = scoreNeededText.rectTransform.position + new Vector3(0, -20, 0);
                     fill.fillAmount = 100;
 
                     //update upgrades in pause menu
@@ -446,7 +446,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 0: // aluminum was picked up   **********update value**********
+                    case 4: // aluminum was picked up   **********update value**********
                         {
                             if (aluminumIsNew)
                             {
@@ -463,7 +463,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 1: // sulfur was picked up   **********update value**********
+                    case 2: // sulfur was picked up   **********update value**********
                         {
                             if (sulfurIsNew)
                             {

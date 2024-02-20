@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject popUp;
+    public GameObject settingsMenu;
     public static bool isPaused;
 
     //creates an instance of the pause menu
@@ -20,7 +21,6 @@ public class PauseMenu : MonoBehaviour
             return;
         }
         Destroy(this.gameObject); //destroy duplicate pause menu objects when returning to MainWorld
-
     }
 
     // Start is called before the first frame update
@@ -61,13 +61,14 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("PsycheRover9000");
-        isPaused = false;
+        ResumeGame();
+        settingsMenu.SetActive(true);
     }
 
     public void IronInfo()
     {
+        PopUp.popUpElementActive = true; //pauses controls
         popUp.gameObject.SetActive(true); //pop up appears
         popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
         popUp.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
@@ -75,6 +76,7 @@ public class PauseMenu : MonoBehaviour
 
     public void SapphireInfo()
     {
+        PopUp.popUpElementActive = true; //pauses controls
         popUp.gameObject.SetActive(true); //pop up appears
         popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
         popUp.transform.Find("SapphireInfo").gameObject.SetActive(true); //sapphire info on pop up appears 
@@ -82,6 +84,7 @@ public class PauseMenu : MonoBehaviour
 
     public void TungstenInfo()
     {
+        PopUp.popUpElementActive = true; //pauses controls
         popUp.gameObject.SetActive(true); //pop up appears
         popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
         popUp.transform.Find("TungstenInfo").gameObject.SetActive(true); //tungsten info on pop up appears 
@@ -89,6 +92,7 @@ public class PauseMenu : MonoBehaviour
 
     public void AluminumInfo()
     {
+        PopUp.popUpElementActive = true; //pauses controls
         popUp.gameObject.SetActive(true); //pop up appears
         popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
         popUp.transform.Find("AluminumInfo").gameObject.SetActive(true); //aluminum info on pop up appears 
@@ -96,6 +100,7 @@ public class PauseMenu : MonoBehaviour
 
     public void SulfurInfo()
     {
+        PopUp.popUpElementActive = true; //pauses controls
         popUp.gameObject.SetActive(true); //pop up appears
         popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
         popUp.transform.Find("SulfurInfo").gameObject.SetActive(true); //sulfur info on pop up appears 

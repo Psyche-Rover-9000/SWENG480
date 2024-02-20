@@ -474,7 +474,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955325767}
+      - m_Target: {fileID: 955325768}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: SFXOff
         m_Mode: 1
@@ -1596,6 +1596,7 @@ GameObject:
   - component: {fileID: 955325766}
   - component: {fileID: 955325765}
   - component: {fileID: 955325767}
+  - component: {fileID: 955325768}
   m_Layer: 0
   m_Name: MenuMusic
   m_TagString: Untagged
@@ -1724,10 +1725,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 955325764}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60022b80983c388428350cdf82aee154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &955325768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955325764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f019eb69fcbead499b25b8dc0698ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: fcb6e0da153fcfb44ba21ba5e3074105, type: 2}
+  audioMixer: {fileID: 0}
 --- !u!1 &992215622
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,7 +2299,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955325767}
+      - m_Target: {fileID: 955325768}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: MusicOff
         m_Mode: 1
@@ -3026,7 +3039,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955325767}
+      - m_Target: {fileID: 955325768}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: SFXOn
         m_Mode: 1
@@ -3094,7 +3107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1602330865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3385,7 +3398,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955325767}
+      - m_Target: {fileID: 955325768}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: MusicOn
         m_Mode: 1

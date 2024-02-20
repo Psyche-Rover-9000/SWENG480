@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -614,7 +614,7 @@ RectTransform:
   m_GameObject: {fileID: 46770173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14439408, y: 0.15529582, z: 0.15529582}
+  m_LocalScale: {x: 0.1648114, y: 0.17725465, z: 0.17725465}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 932779559}
@@ -2652,7 +2652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b44b37c90c28057498a2938499a80c60, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbc9a5acadbd50d42adb9072ce4744ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4035,7 +4035,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: + ? Points
+  m_text: + 4 Points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4195,7 +4195,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868042283}
+      - m_Target: {fileID: 915557097}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: MusicOn
         m_Mode: 1
@@ -4973,10 +4973,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1384193539}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1895482175}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9397,7 +9397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868042283}
+      - m_Target: {fileID: 915557097}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: SFXOff
         m_Mode: 1
@@ -9767,7 +9767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -269}
+  m_AnchoredPosition: {x: -54, y: -269}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717481176
@@ -9790,7 +9790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grabber Claw
+  m_text: 'Grabber '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10776,6 +10776,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898478354}
   m_CullTransparentMesh: 1
+--- !u!1 &915557095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915557096}
+  - component: {fileID: 915557097}
+  m_Layer: 0
+  m_Name: SoundSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &915557096
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915557095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 956078922}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &915557097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915557095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f019eb69fcbead499b25b8dc0698ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: fcb6e0da153fcfb44ba21ba5e3074105, type: 2}
 --- !u!1 &920395828
 GameObject:
   m_ObjectHideFlags: 0
@@ -12638,6 +12687,7 @@ RectTransform:
   - {fileID: 1326912635}
   - {fileID: 2062329534}
   - {fileID: 666763173}
+  - {fileID: 915557096}
   m_Father: {fileID: 1911206414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -14620,7 +14670,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868042283}
+      - m_Target: {fileID: 915557097}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: SFXOn
         m_Mode: 1
@@ -17109,8 +17159,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hold _ while next to an obstacle, then move away to pull the obstacle with
-    you
+  m_text: Hold Left-Shift while next to an obstacle, then move away to pull the obstacle
+    with you
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -17641,7 +17691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868042285}
   - component: {fileID: 1868042284}
-  - component: {fileID: 1868042283}
+  - component: {fileID: 1868042286}
   m_Layer: 0
   m_Name: GameMusic
   m_TagString: Untagged
@@ -17649,19 +17699,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1868042283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868042282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f019eb69fcbead499b25b8dc0698ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: fcb6e0da153fcfb44ba21ba5e3074105, type: 2}
 --- !u!82 &1868042284
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17774,6 +17811,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1868042286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868042282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60022b80983c388428350cdf82aee154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1894966196
 GameObject:
   m_ObjectHideFlags: 0
@@ -26812,6 +26861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1384193539}
   popUp: {fileID: 1213842349}
+  settingsMenu: {fileID: 0}
 --- !u!114 &1895482176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26932,7 +26982,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: + ? Points
+  m_text: + 2 Points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27844,7 +27894,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868042283}
+      - m_Target: {fileID: 915557097}
         m_TargetAssemblyTypeName: Music, Assembly-CSharp
         m_MethodName: MusicOff
         m_Mode: 1
@@ -27906,7 +27956,7 @@ GameObject:
   - component: {fileID: 2085899967}
   - component: {fileID: 2085899966}
   m_Layer: 0
-  m_Name: InteractE
+  m_Name: LeftShift
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27921,15 +27971,15 @@ RectTransform:
   m_GameObject: {fileID: 2085899964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.65760183}
-  m_LocalScale: {x: 0.8050716, y: 0.76710063, z: 0.6027406}
+  m_LocalScale: {x: 0.18843396, y: 0.17954652, z: 0.14107664}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 717481175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223, y: 10.003143}
-  m_SizeDelta: {x: 105.7685, y: 78.8192}
+  m_AnchoredPosition: {x: 207, y: 10}
+  m_SizeDelta: {x: 650, y: 265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085899966
 MonoBehaviour:
@@ -27951,7 +28001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ca4be7352d0e69c4f94c38f969c08c6a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbc9a5acadbd50d42adb9072ce4744ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
