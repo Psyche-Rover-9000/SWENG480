@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Element
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &136865707537442645
 Transform:
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf8aaca1888c9245a05b8a4b841b3f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisElementVariance: []
 --- !u!212 &3537856709165828710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -157,8 +158,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -3237913
+  m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f31807c5b78b3a3469346ad328042d6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

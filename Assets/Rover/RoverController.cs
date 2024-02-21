@@ -39,8 +39,8 @@ public class RoverController : MonoBehaviour
     private float angle;
     private int level2 = 10;
     private int level3 = 20;
-    private int level4 = 30;
-    private int level5 = 40;
+    private int level4 = 40;
+    private int level5 = 80;
 
     //pop up related objects and variables
     public GameObject popUpPanel;
@@ -71,7 +71,7 @@ public class RoverController : MonoBehaviour
     private float horizontalLock;
     private float verticalLock;
     private bool isPulling;
-
+    
     //creates an instance of the player rover
     private static RoverController roverInstance = null;
 
@@ -313,14 +313,14 @@ public class RoverController : MonoBehaviour
                 //update score progress in pause menu
                 currentScoreText.text = $"Current Score is {score.getScore()}";
 
-                if (score.getScore() < 40) // maximum upgrade score
+                if (score.getScore() < level5) // maximum upgrade score
                 {
                     scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
                 }
 
                 //new upgrade pop up + pause menu
-                if (score.getScore() >= 10 && !boostUnlocked) //boost unlocked when score is 10
+                if (score.getScore() >= level2 && !boostUnlocked) //boost unlocked when score is 10
                 {  
 
                     //pop up
@@ -330,7 +330,7 @@ public class RoverController : MonoBehaviour
                     boostUnlocked = true;
 
                     //change progress bar goal for next upgrade
-                    scoreNeeded = 20;
+                    scoreNeeded = level3;
                     scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
@@ -339,7 +339,7 @@ public class RoverController : MonoBehaviour
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("BoostInfo").gameObject.SetActive(true);
 
                 }
-                if (score.getScore() >= 20 && !transmitterUnlocked) //transmitter unlocked when score is 20***
+                if (score.getScore() >= level3 && !transmitterUnlocked) //transmitter unlocked when score is 20***
                 {
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
@@ -348,7 +348,7 @@ public class RoverController : MonoBehaviour
                     transmitterUnlocked = true;
 
                     //change progress bar goal for next upgrade
-                    scoreNeeded = 30;
+                    scoreNeeded = level4;
                     scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
@@ -356,7 +356,7 @@ public class RoverController : MonoBehaviour
                     nextUpgradeText.text = "Flashlight"; //change to whatever next upgrade is
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("TransmitterInfo").gameObject.SetActive(true);
                 }
-                if (score.getScore() >= 30 && !flashlightUnlocked) //flashlight unlocked when score is 30***
+                if (score.getScore() >= level4 && !flashlightUnlocked) //flashlight unlocked when score is 30***
                 {
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
@@ -365,7 +365,7 @@ public class RoverController : MonoBehaviour
                     flashlightUnlocked = true;
 
                     //change progress bar goal for next upgrade
-                    scoreNeeded = 40;
+                    scoreNeeded = level5;
                     scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
@@ -373,7 +373,7 @@ public class RoverController : MonoBehaviour
                     nextUpgradeText.text = "Grabber"; //change to whatever next upgrade is
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("FlashlightInfo").gameObject.SetActive(true);
                 }
-                if (score.getScore() >= 40 && !grabberUnlocked) //grabber claw unlocked when score is 40***
+                if (score.getScore() >= level5 && !grabberUnlocked) //grabber claw unlocked when score is 40***
                 {
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
