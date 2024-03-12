@@ -39,7 +39,7 @@ public abstract class GenericElement : MonoBehaviour
     {
         SpriteRenderer thisElement = gameObject.GetComponent<SpriteRenderer>();
          
-        int ramdomNumber = Random.Range(0 , thisElementVariance.Length);
+        int ramdomNumber = Random.Range(0 , thisElementVariance.Length - 1);
         thisElement.sprite = thisElementVariance[ramdomNumber];
 
 
