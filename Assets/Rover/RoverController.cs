@@ -71,7 +71,10 @@ public class RoverController : MonoBehaviour
     private float horizontalLock;
     private float verticalLock;
     private bool isPulling;
-    
+
+    //list of coordinates for collected elements - used to destroy collected object upon scene reload
+    public List<Vector3> elementCoordinates = new List<Vector3>();
+
     //creates an instance of the player rover
     private static RoverController roverInstance = null;
 
@@ -309,6 +312,10 @@ public class RoverController : MonoBehaviour
                 int val = collision.gameObject.GetComponent<GenericElement>().getElement();
                 collectSFX.Play();
                 score.adjustScore(val);
+
+                //store coordinates of the collected element to list
+                Vector3 coordinates = collision.gameObject.GetComponent<GenericElement>().getCoordinates();
+                elementCoordinates.Add(coordinates);
 
                 //update score progress in pause menu
                 currentScoreText.text = $"Current Score is {score.getScore()}";
