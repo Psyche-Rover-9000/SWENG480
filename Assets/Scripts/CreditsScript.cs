@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Disclaimer : MonoBehaviour
+public class CreditsScript : MonoBehaviour
 {
     public void clickOK()
     {
-        SceneManager.LoadScene("MainWorld"); //load main world
+        SceneManager.LoadScene("PsycheRover9000"); //load main menu
     }
 
 }

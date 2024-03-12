@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour
 {   
     public void play() // load game
     {
-        SceneManager.LoadScene("Disclaimer"); //load disclaimer scene
+        SceneManager.LoadScene("MainWorld"); //load main world scene
+    }
+
+    public void credits() // load credits scene
+    {
+        SceneManager.LoadScene("Credits"); //load Credits
     }
 }
