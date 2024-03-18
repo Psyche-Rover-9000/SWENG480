@@ -171,4 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8a059f09e1d594ba957552de504fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisElementVariance: []
+  thisElementVariance:
+  - {fileID: 21300000, guid: f5018d44141683a46b5a0492e7f59635, type: 3}

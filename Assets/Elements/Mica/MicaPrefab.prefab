@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4036557808394945321}
   - component: {fileID: -1222424015030288665}
-  - component: {fileID: -8799628474910985676}
   - component: {fileID: 1280737285239068874}
   - component: {fileID: 8996449057684474116}
+  - component: {fileID: -3287522127892079504}
   m_Layer: 0
   m_Name: MicaPrefab
   m_TagString: Element
@@ -87,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8799628474910985676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239535715054916067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d6cee9c6693474c976bd70cdf78987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1280737285239068874
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-3287522127892079504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239535715054916067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d6cee9c6693474c976bd70cdf78987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisElementVariance:
+  - {fileID: 21300000, guid: 63c6a17784b794142b2531780ef06b76, type: 3}
