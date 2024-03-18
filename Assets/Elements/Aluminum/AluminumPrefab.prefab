@@ -119,7 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf8aaca1888c9245a05b8a4b841b3f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisElementVariance: []
+  thisElementVariance:
+  - {fileID: 21300000, guid: f31807c5b78b3a3469346ad328042d6c, type: 3}
 --- !u!212 &3537856709165828710
 SpriteRenderer:
   m_ObjectHideFlags: 0
