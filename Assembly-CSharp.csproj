@@ -64,8 +64,8 @@
     <Compile Include="Assets\Sign.cs" />
     <Compile Include="Assets\Score\ScoreBoard.cs" />
     <Compile Include="Assets\Main Menu\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\Disclaimer.cs" />
     <Compile Include="Assets\Elements\Tungsten\TungstenScript.cs" />
+    <Compile Include="Assets\Scripts\CreditsScript.cs" />
     <Compile Include="Assets\Music\MusicDDOL.cs" />
     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
     <Compile Include="Assets\Elements\GenericElement.cs" />
