@@ -31,7 +31,7 @@ public class RoverController : MonoBehaviour
     private float boost;
     private Animator animator;
     private Vector2 input;
-    private int roverLevel;
+    public int roverLevel;
     private ScoreBoard score;
     private string animationLevel;
     private float horizontal;
