@@ -14,10 +14,13 @@ public class PopUp : MonoBehaviour
         {
             //close any current element info
             popUp.transform.Find("IronInfo").gameObject.SetActive(false);
-            popUp.transform.Find("SapphireInfo").gameObject.SetActive(false);
-            popUp.transform.Find("AluminumInfo").gameObject.SetActive(false);
-            popUp.transform.Find("TungstenInfo").gameObject.SetActive(false);
-            popUp.transform.Find("SulfurInfo").gameObject.SetActive(false);
+            popUp.transform.Find("RockInfo").gameObject.SetActive(false);
+            popUp.transform.Find("MicaInfo").gameObject.SetActive(false);
+            popUp.transform.Find("NickelInfo").gameObject.SetActive(false);
+            popUp.transform.Find("OlivineInfo").gameObject.SetActive(false);
+            popUp.transform.Find("FeldsparInfo").gameObject.SetActive(false);
+            popUp.transform.Find("PyroxeneInfo").gameObject.SetActive(false);
+            popUp.transform.Find("QuartzInfo").gameObject.SetActive(false);
 
             //mark element pop up ad closed
             popUpElementActive = false;
@@ -38,3 +41,4 @@ public class PopUp : MonoBehaviour
         popUp.SetActive(false);
     }
 }
+

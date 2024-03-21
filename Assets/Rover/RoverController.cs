@@ -8,7 +8,7 @@ using UnityEngine.UI;
 using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.Tilemaps;
 using System.Diagnostics;
-
+using System;
 
 public class RoverController : MonoBehaviour
 {
@@ -31,7 +31,7 @@ public class RoverController : MonoBehaviour
     private float boost;
     private Animator animator;
     private Vector2 input;
-    private int roverLevel;
+    public int roverLevel;
     private ScoreBoard score;
     private string animationLevel;
     private float horizontal;
@@ -45,10 +45,13 @@ public class RoverController : MonoBehaviour
     //pop up related objects and variables
     public GameObject popUpPanel;
     bool ironIsNew = true;
-    bool sapphireIsNew = true;
-    bool tungstenIsNew = true;
-    bool aluminumIsNew = true;
-    bool sulfurIsNew = true;
+    bool rockIsNew = true;
+    bool micaIsNew = true;
+    bool nickelIsNew = true;
+    bool olivineIsNew = true;
+    bool feldsparIsNew = true;
+    bool pyroxeneIsNew = true;
+    bool quartzIsNew = true;
 
     public GameObject upgradePopUp;
     bool boostUnlocked = false;
@@ -402,13 +405,41 @@ public class RoverController : MonoBehaviour
                 //new element pop ups + pause menu
                 switch (val) //switch determines which element was just picked up
                 {
-                    case 3: // iron was picked up
+                    case 2: // rock was picked up
+                        {
+                            if (rockIsNew) //pop ups only appear the first time an element is picked up
+                            {
+                                newElementPopUp();  //setup new element pop up
+                                popUpPanel.transform.Find("RockInfo").gameObject.SetActive(true); //Rock info on pop up appears 
+
+                                //add rock info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_rock").Find("RockButton").gameObject.SetActive(true);
+
+                                rockIsNew = false;
+                            }
+                            break;
+                        }
+
+                    case 3: // mica was picked up
+                        {
+                            if (micaIsNew) //pop ups only appear the first time an element is picked up
+                            {
+                                newElementPopUp();  //setup new element pop up
+                                popUpPanel.transform.Find("MicaInfo").gameObject.SetActive(true); //mica info on pop up appears 
+
+                                //add mica info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_mica").Find("MicaButton").gameObject.SetActive(true);
+
+                                micaIsNew = false;
+                            }
+                            break;
+                        }
+
+                    case 4: // iron was picked up
                         {
                             if (ironIsNew) //pop ups only appear the first time an element is picked up
                             {
-                                PopUp.popUpElementActive = true; //pauses controls
-                                popUpPanel.gameObject.SetActive(true); //pop up appears
-                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
+                                newElementPopUp();  //setup new element pop up
                                 popUpPanel.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
 
                                 //add iron info button to pause menu
@@ -419,70 +450,77 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 5: // tungsten was picked up
+                    case 5: // nickel was picked up
                         {
-                            if (tungstenIsNew)
+                            if (nickelIsNew)
                             {
-                                PopUp.popUpElementActive = true; //pauses controls
-                                popUpPanel.gameObject.SetActive(true); //pop up appears
-                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
-                                popUpPanel.transform.Find("TungstenInfo").gameObject.SetActive(true); //tungsten info on pop up appears 
+                                newElementPopUp();  //setup new element pop up
+                                popUpPanel.transform.Find("NickelInfo").gameObject.SetActive(true); //nickel info on pop up appears 
 
-                                //add tungsten info button to pause menu
-                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_tungsten").Find("TungstenButton").gameObject.SetActive(true);
+                                //add nickel info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_nickel").Find("NickelButton").gameObject.SetActive(true);
 
-                                tungstenIsNew = false;
+                                nickelIsNew = false;
                             }
                             break;
                         }
 
-                    case 10: // sapphire was picked up
+                    case 8: // olivine was picked up
                         {
-                            if (sapphireIsNew)
+                            if (olivineIsNew)
                             {
-                                PopUp.popUpElementActive = true; //pauses controls
-                                popUpPanel.gameObject.SetActive(true); //pop up appears
-                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
-                                popUpPanel.transform.Find("SapphireInfo").gameObject.SetActive(true); //sapphire info on pop up appears 
+                                newElementPopUp();  //setup new element pop up
+                                popUpPanel.transform.Find("OlivineInfo").gameObject.SetActive(true); //olivine info on pop up appears 
 
-                                //add sapphire info button to pause menu
-                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_sapphire").Find("SapphireButton").gameObject.SetActive(true);
+                                //add olivine info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_olivine").Find("OlivineButton").gameObject.SetActive(true);
 
-                                sapphireIsNew = false;
+                                olivineIsNew = false;
                             }
                             break;
                         }
 
-                    case 4: // aluminum was picked up   **********update value**********
+                    case 9: // feldspar was picked up
                         {
-                            if (aluminumIsNew)
+                            if (feldsparIsNew) //pop ups only appear the first time an element is picked up
                             {
-                                PopUp.popUpElementActive = true; //pauses controls
-                                popUpPanel.gameObject.SetActive(true); //pop up appears
-                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
-                                popUpPanel.transform.Find("AluminumInfo").gameObject.SetActive(true); //aluminum info on pop up appears 
+                                newElementPopUp();  //setup new element pop up
+                                popUpPanel.transform.Find("FeldsparInfo").gameObject.SetActive(true); //feldspar info on pop up appears 
 
-                                //add aluminum info button to pause menu
-                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_aluminum").Find("AluminumButton").gameObject.SetActive(true);
+                                //add feldspar info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_feldspar").Find("FeldsparButton").gameObject.SetActive(true);
 
-                                aluminumIsNew = false;
+                                feldsparIsNew = false;
                             }
                             break;
                         }
 
-                    case 2: // sulfur was picked up   **********update value**********
+                    case 10: // pyroxene was picked up
                         {
-                            if (sulfurIsNew)
+                            if (pyroxeneIsNew)
                             {
-                                PopUp.popUpElementActive = true; //pauses controls
-                                popUpPanel.gameObject.SetActive(true); //pop up appears
-                                popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
-                                popUpPanel.transform.Find("SulfurInfo").gameObject.SetActive(true); //sulfur info on pop up appears 
+                                newElementPopUp();  //setup new element pop up
+                                popUpPanel.transform.Find("PyroxeneInfo").gameObject.SetActive(true); //pyroxene info on pop up appears 
 
-                                //add sulfur info button to pause menu
-                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_sulfur").Find("SulfurButton").gameObject.SetActive(true);
+                                //add pyroxene info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_pyroxene").Find("PyroxeneButton").gameObject.SetActive(true);
 
-                                sulfurIsNew = false;
+                                pyroxeneIsNew = false;
+                            }
+                            break;
+                        }
+
+                    case 15: // quartz was picked up
+                        {
+                            if (quartzIsNew)
+                            {
+                                newElementPopUp();  //setup new element pop up
+                                popUpPanel.transform.Find("QuartzInfo").gameObject.SetActive(true); //quartz info on pop up appears 
+
+                                //add quartz info button to pause menu
+                                popUpPanel.transform.parent.Find("PausePanel").Find("ElementBlocks").Find("ElementBlock_quartz").Find("QuartzButton").gameObject.SetActive(true);
+
+                                quartzIsNew = false;
                             }
                             break;
                         }
@@ -501,6 +539,13 @@ public class RoverController : MonoBehaviour
         
     }
 
-
+    //prepares new element popup before specific element info appears
+    private void newElementPopUp()
+    {
+        PopUp.popUpElementActive = true; //pauses controls
+        popUpPanel.gameObject.SetActive(true); //pop up appears
+        popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
+        return;
+    }
 }
 

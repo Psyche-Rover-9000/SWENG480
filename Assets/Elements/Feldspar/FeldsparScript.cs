@@ -7,7 +7,7 @@ public class FeldsparScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 4;
+        value = 9;
         GenerateRandomVariance();
     }
 

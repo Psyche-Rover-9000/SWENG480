@@ -9,7 +9,7 @@ public class MicaScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 10;
+        value = 3;
         GenerateRandomVariance();
     }
 

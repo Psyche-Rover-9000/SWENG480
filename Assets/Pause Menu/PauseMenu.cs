@@ -66,43 +66,60 @@ public class PauseMenu : MonoBehaviour
         settingsMenu.SetActive(true);
     }
 
+    public void ElementInfo()
+    {
+        PopUp.popUpElementActive = true; //pauses controls
+        popUp.gameObject.SetActive(true); //pop up appears
+        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
+        return;
+    }
+
     public void IronInfo()
     {
-        PopUp.popUpElementActive = true; //pauses controls
-        popUp.gameObject.SetActive(true); //pop up appears
-        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
-        popUp.transform.Find("IronInfo").gameObject.SetActive(true); //iron info on pop up appears 
+        ElementInfo();
+        popUp.transform.Find("IronInfo").gameObject.SetActive(true); //relevent info on pop up appears 
     }
 
-    public void SapphireInfo()
+    public void RockInfo()
     {
-        PopUp.popUpElementActive = true; //pauses controls
-        popUp.gameObject.SetActive(true); //pop up appears
-        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
-        popUp.transform.Find("SapphireInfo").gameObject.SetActive(true); //sapphire info on pop up appears 
+        ElementInfo();
+        popUp.transform.Find("RockInfo").gameObject.SetActive(true); //relevent info on pop up appears 
     }
 
-    public void TungstenInfo()
+    public void MicaInfo()
     {
-        PopUp.popUpElementActive = true; //pauses controls
-        popUp.gameObject.SetActive(true); //pop up appears
-        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
-        popUp.transform.Find("TungstenInfo").gameObject.SetActive(true); //tungsten info on pop up appears 
+        ElementInfo();
+        popUp.transform.Find("MicaInfo").gameObject.SetActive(true); //relevent info on pop up appears
     }
 
-    public void AluminumInfo()
+    public void NickelInfo()
     {
-        PopUp.popUpElementActive = true; //pauses controls
-        popUp.gameObject.SetActive(true); //pop up appears
-        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
-        popUp.transform.Find("AluminumInfo").gameObject.SetActive(true); //aluminum info on pop up appears 
+        ElementInfo();
+        popUp.transform.Find("NickelInfo").gameObject.SetActive(true); //relevent info on pop up appears
+
     }
 
-    public void SulfurInfo()
+   public void OlivineInfo()
+   { 
+        ElementInfo();
+        popUp.transform.Find("OlivineInfo").gameObject.SetActive(true); //relevent info on pop up appears 
+   }
+
+    public void FeldsparInfo()
     {
-        PopUp.popUpElementActive = true; //pauses controls
-        popUp.gameObject.SetActive(true); //pop up appears
-        popUp.transform.Find("NewElementText").gameObject.SetActive(false); //hide "new element found" text
-        popUp.transform.Find("SulfurInfo").gameObject.SetActive(true); //sulfur info on pop up appears 
+        ElementInfo();
+        popUp.transform.Find("FeldsparInfo").gameObject.SetActive(true); //relevent info on pop up appears 
+    }
+
+    public void PyroxeneInfo()
+    {
+        ElementInfo();
+        popUp.transform.Find("PyroxeneInfo").gameObject.SetActive(true); //relevent info on pop up appears 
+    }
+
+    public void QuartzInfo()
+    {
+        ElementInfo();
+        popUp.transform.Find("QuartzInfo").gameObject.SetActive(true); //relevent info on pop up appears 
     }
 }
