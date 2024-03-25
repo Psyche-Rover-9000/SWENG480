@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DestroyObstacle : MonoBehaviour
 {
-    public GameObject roverPlayer;
-    public RoverController roverScript;
-    public int roverScore;
+    private GameObject roverPlayer;
+    private RoverController roverScript;
+    private int roverScore;
     // Start is called before the first frame update
     void Start()
     {

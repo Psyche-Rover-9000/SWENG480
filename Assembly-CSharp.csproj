@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Rover\RoverController.cs" />
+    <Compile Include="Assets\interactableObjects\FactBookScript.cs" />
     <Compile Include="Assets\Elements\Mica\MicaScript.cs" />
     <Compile Include="Assets\Elements\Iron\IronScript.cs" />
     <Compile Include="Assets\Score\ScoreBoard.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\interactableObjects\DestroyObstacle.cs" />
     <Compile Include="Assets\Elements\Nickel\NickelScript.cs" />
     <Compile Include="Assets\interactableObjects\Sign.cs" />
+    <Compile Include="Assets\Scenes\StaticBlockerScript.cs" />
     <Compile Include="Assets\Scripts\SetSpawnPoint.cs" />
     <Compile Include="Assets\Scripts\LevelMove_Ref.cs" />
     <Compile Include="Assets\Pause Menu\PauseMenu.cs" />
