@@ -78,6 +78,9 @@ public class RoverController : MonoBehaviour
     //list of coordinates for collected elements - used to destroy collected object upon scene reload
     public List<Vector3> elementCoordinates = new List<Vector3>();
 
+    //coordinates near cave entrance that setSpawn() will move rover to anytime hub world loads
+    private Vector3 caveCoordinates = new Vector3(-10.15f, 2.27f, 0); //initialize to spawn point for startup of the game
+
     //creates an instance of the player rover
     private static RoverController roverInstance = null;
 
@@ -546,6 +549,19 @@ public class RoverController : MonoBehaviour
         popUpPanel.gameObject.SetActive(true); //pop up appears
         popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
         return;
+    }
+
+    public void setSpawn(Vector3 coordinates)
+    {
+        coordinates.y -= 2; // move slightly down from teleporter
+        coordinates.z -= 0.007233049f; // level move objects are not at 0 for z, like rover should be
+        caveCoordinates = coordinates;  //set coordinates for moveSpawn
+    }
+
+    public void moveSpawn()
+    {
+        gameObject.transform.position = caveCoordinates;    // move rover to caveCooridnates
+
     }
 }
 

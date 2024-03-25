@@ -9,6 +9,7 @@ TagManager:
   - Popup
   - Breakable
   - Pullable
+  - LevelMove
   layers:
   - Default
   - TransparentFX

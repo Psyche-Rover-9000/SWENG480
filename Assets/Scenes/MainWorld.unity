@@ -4614,6 +4614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelMove Cave4
       objectReference: {fileID: 0}
+    - target: {fileID: 2163628284031106789, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelMove
+      objectReference: {fileID: 0}
     - target: {fileID: 7207470013705534657, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
         type: 3}
       propertyPath: sceneBuildIndex
@@ -23529,7 +23534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837555358}
-  - component: {fileID: 837555357}
+  - component: {fileID: 837555359}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -23537,19 +23542,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &837555357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837555356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0403f8284c6d4f54eae4b4ed15ca3962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {x: -10.15, y: 2.27, z: 0}
 --- !u!4 &837555358
 Transform:
   m_ObjectHideFlags: 0
@@ -23565,6 +23557,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837555359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837555356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ea5a5de593ba6458053f4b22ff92cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851778622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6670633118957929675, guid: 5fa5853b057fa401c8b99aff3f3e9304,
@@ -29895,6 +29899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelMove Cave3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163628284031106789, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelMove
       objectReference: {fileID: 0}
     - target: {fileID: 7207470013705534657, guid: 4ba3fc235bd8b407cb2025ea81be97a7,
         type: 3}
@@ -44785,7 +44794,7 @@ GameObject:
   - component: {fileID: 2119232531}
   m_Layer: 0
   m_Name: LevelMove
-  m_TagString: Untagged
+  m_TagString: LevelMove
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45059,6 +45068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelMove Cave2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996285789485773805, guid: a41884f165b74994faeeb22e13f01534,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelMove
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
