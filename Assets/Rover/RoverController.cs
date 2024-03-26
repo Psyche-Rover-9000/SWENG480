@@ -44,14 +44,14 @@ public class RoverController : MonoBehaviour
 
     //pop up related objects and variables
     public GameObject popUpPanel;
-    bool ironIsNew = true;
-    bool rockIsNew = true;
-    bool micaIsNew = true;
-    bool nickelIsNew = true;
-    bool olivineIsNew = true;
-    bool feldsparIsNew = true;
-    bool pyroxeneIsNew = true;
-    bool quartzIsNew = true;
+    public bool ironIsNew = true;
+    public bool rockIsNew = true;
+    public bool micaIsNew = true;
+    public bool nickelIsNew = true;
+    public bool olivineIsNew = true;
+    public bool feldsparIsNew = true;
+    public bool pyroxeneIsNew = true;
+    public bool quartzIsNew = true;
 
     public GameObject upgradePopUp;
     bool boostUnlocked = false;
