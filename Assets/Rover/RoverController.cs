@@ -79,7 +79,7 @@ public class RoverController : MonoBehaviour
     public List<Vector3> elementCoordinates = new List<Vector3>();
 
     //coordinates near cave entrance that setSpawn() will move rover to anytime hub world loads
-    private Vector3 caveCoordinates = new Vector3(-10.15f, 2.27f, 0); //initialize to spawn point for startup of the game
+    private Vector3 caveCoordinates = new Vector3(-95.97f, -9.04f, 0); //initialize to spawn point for startup of the game
 
     //creates an instance of the player rover
     private static RoverController roverInstance = null;
@@ -93,7 +93,7 @@ public class RoverController : MonoBehaviour
             DontDestroyOnLoad(this.gameObject); //used to keep the same rover object in all scenes
             return;
         }
-        Destroy(this.gameObject); //destroy duplicate rover objects when returning to MainWorld
+        Destroy(this.gameObject); //destroy duplicate rover objects when returning to HubWorld
     }
 
     // Start is called before the first frame update
@@ -554,7 +554,6 @@ public class RoverController : MonoBehaviour
     public void setSpawn(Vector3 coordinates)
     {
         coordinates.y -= 2; // move slightly down from teleporter
-        coordinates.z -= 0.007233049f; // level move objects are not at 0 for z, like rover should be
         caveCoordinates = coordinates;  //set coordinates for moveSpawn
     }
 
