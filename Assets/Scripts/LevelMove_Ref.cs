@@ -18,7 +18,7 @@ public class LevelMove_Ref : MonoBehaviour
         if (other.tag == "Player")
         {
             //if in hub world
-            if (SceneManager.GetActiveScene().name == "MainWorld")
+            if (SceneManager.GetActiveScene().name == "HubWorld")
             {
                 print(gameObject.transform.position);
                 other.GetComponentInParent<RoverController>().setSpawn(gameObject.transform.position);  // set spawn in rover controller for when returning to hub world

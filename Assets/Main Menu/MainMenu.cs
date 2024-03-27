@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {   
     public void play() // load game
     {
-        SceneManager.LoadScene("MainWorld"); //load main world scene
+        SceneManager.LoadScene("HubWorld"); //load main world scene
     }
 
     public void credits() // load credits scene
