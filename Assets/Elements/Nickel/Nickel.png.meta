@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,18 +121,167 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Nickel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -13}
+        - {x: 5, y: -13}
+        - {x: 5, y: -16}
+        - {x: 14, y: -16}
+        - {x: 15, y: -14}
+        - {x: 15, y: -10}
+        - {x: 14, y: -9}
+        - {x: 14, y: -1}
+        - {x: 12, y: 2}
+        - {x: 14, y: 5}
+        - {x: 14, y: 9}
+        - {x: 8, y: 15}
+        - {x: 2, y: 15}
+        - {x: -3, y: 11}
+        - {x: -3, y: 7}
+        - {x: -4, y: 9}
+        - {x: -9, y: 13}
+        - {x: -11, y: 13}
+        - {x: -16, y: 9}
+        - {x: -16, y: -1}
+        - {x: -14, y: -6}
+        - {x: -12, y: -8}
+        - {x: -10, y: -8}
+        - {x: -14, y: -9}
+        - {x: -14, y: -15}
+        - {x: -13, y: -16}
+        - {x: -7, y: -16}
+        - {x: -5, y: -14}
+        - {x: -5, y: -11}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 3d5f33c9b40faa844aa47f108c9f4d02
+      internalID: 1593792512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nickel_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -6}
+        - {x: 7, y: -8}
+        - {x: 13, y: -8}
+        - {x: 16, y: -5}
+        - {x: 16, y: 12}
+        - {x: 13, y: 16}
+        - {x: 4, y: 16}
+        - {x: 1, y: 13}
+        - {x: 1, y: -2}
+        - {x: -1, y: 0}
+        - {x: -4, y: 0}
+        - {x: -2, y: 4}
+        - {x: -2, y: 10}
+        - {x: -6, y: 15}
+        - {x: -9, y: 16}
+        - {x: -12, y: 16}
+        - {x: -15, y: 14}
+        - {x: -16, y: 11}
+        - {x: -16, y: 0}
+        - {x: -11, y: -4}
+        - {x: -8, y: -4}
+        - {x: -6, y: -2}
+        - {x: -6, y: -5}
+        - {x: -8, y: -8}
+        - {x: -8, y: -13}
+        - {x: -6, y: -16}
+        - {x: 4, y: -16}
+        - {x: 5, y: -14}
+        - {x: 5, y: -7}
+        - {x: 4, y: -6}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 2887accb35e1f104cb801e3b1b03b099
+      internalID: -1748076732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nickel_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 7, y: -16}
+        - {x: 14, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: -7}
+        - {x: 15, y: -6}
+        - {x: 16, y: -5}
+        - {x: 16, y: 5}
+        - {x: 15, y: 6}
+        - {x: 15, y: 8}
+        - {x: 12, y: 15}
+        - {x: 6, y: 15}
+        - {x: 5, y: 14}
+        - {x: -8, y: 14}
+        - {x: -9, y: 13}
+        - {x: -13, y: 12}
+        - {x: -16, y: 10}
+        - {x: -16, y: -1}
+        - {x: -14, y: -3}
+        - {x: -12, y: -3}
+        - {x: -15, y: -7}
+        - {x: -15, y: -14}
+        - {x: -13, y: -16}
+        - {x: 5, y: -16}
+        - {x: 6, y: -15}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 3d479686aa9d4204e94670c94e915271
+      internalID: -1125813537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: dbbccb0b5aa59654b96fc0842e5ac4d2
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nickel_0: 1593792512
+      Nickel_1: -1748076732
+      Nickel_2: -1125813537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

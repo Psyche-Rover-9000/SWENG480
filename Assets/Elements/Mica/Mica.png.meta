@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,18 +121,173 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mica_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -13}
+        - {x: 5, y: -13}
+        - {x: 5, y: -16}
+        - {x: 14, y: -16}
+        - {x: 15, y: -14}
+        - {x: 15, y: -10}
+        - {x: 14, y: -9}
+        - {x: 14, y: -1}
+        - {x: 12, y: 2}
+        - {x: 14, y: 5}
+        - {x: 14, y: 9}
+        - {x: 8, y: 15}
+        - {x: 2, y: 15}
+        - {x: -3, y: 11}
+        - {x: -3, y: 7}
+        - {x: -4, y: 9}
+        - {x: -9, y: 13}
+        - {x: -11, y: 13}
+        - {x: -16, y: 9}
+        - {x: -16, y: -1}
+        - {x: -14, y: -6}
+        - {x: -12, y: -8}
+        - {x: -10, y: -8}
+        - {x: -14, y: -9}
+        - {x: -14, y: -15}
+        - {x: -13, y: -16}
+        - {x: -7, y: -16}
+        - {x: -5, y: -14}
+        - {x: -5, y: -11}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1cf155eae4dda8b44aea1af4b84a6a8c
+      internalID: 418529580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mica_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 11, y: 0}
+        - {x: 11, y: 1}
+        - {x: 14, y: 3}
+        - {x: 14, y: 8}
+        - {x: 11, y: 11}
+        - {x: 9, y: 11}
+        - {x: 8, y: 12}
+        - {x: 4, y: 12}
+        - {x: 3, y: 13}
+        - {x: -3, y: 13}
+        - {x: -3, y: 14}
+        - {x: -5, y: 16}
+        - {x: -14, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: 8}
+        - {x: -15, y: 7}
+        - {x: -15, y: 6}
+        - {x: -16, y: 5}
+        - {x: -16, y: -9}
+        - {x: -14, y: -12}
+        - {x: -11, y: -13}
+        - {x: 11, y: -13}
+        - {x: 16, y: -9}
+        - {x: 16, y: -3}
+        - {x: 13, y: 0}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f8812b95c755f6545944ad17b63406f2
+      internalID: -1339130363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mica_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: -7}
+        - {x: -12, y: -9}
+        - {x: -12, y: -13}
+        - {x: -10, y: -16}
+        - {x: 0, y: -16}
+        - {x: 0, y: -11}
+        - {x: -2, y: -7}
+      - - {x: 12, y: -1}
+        - {x: 3, y: -1}
+        - {x: 0, y: -6}
+        - {x: 0, y: -11}
+        - {x: 2, y: -13}
+        - {x: 11, y: -13}
+        - {x: 16, y: -8}
+        - {x: 16, y: -6}
+        - {x: 14, y: -2}
+      - - {x: 1, y: 13}
+        - {x: -5, y: 13}
+        - {x: -9, y: 10}
+        - {x: -11, y: 7}
+        - {x: -11, y: 1}
+        - {x: -6, y: -4}
+        - {x: -2, y: -3}
+        - {x: 3, y: 0}
+        - {x: 4, y: 3}
+        - {x: 4, y: 6}
+      - - {x: 6, y: 15}
+        - {x: 3, y: 12}
+        - {x: 3, y: 8}
+        - {x: 8, y: 2}
+        - {x: 9, y: 0}
+        - {x: 12, y: 0}
+        - {x: 15, y: 3}
+        - {x: 15, y: 8}
+        - {x: 11, y: 15}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1e82483f523300d448becb22e140769f
+      internalID: 1395017890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8213ad7a22a003645afe4f15892de20d
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mica_0: 418529580
+      Mica_1: -1339130363
+      Mica_2: 1395017890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
