@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,18 +121,200 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Feldspar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -13}
+        - {x: 5, y: -13}
+        - {x: 5, y: -16}
+        - {x: 14, y: -16}
+        - {x: 15, y: -14}
+        - {x: 15, y: -10}
+        - {x: 14, y: -9}
+        - {x: 14, y: -1}
+        - {x: 12, y: 2}
+        - {x: 14, y: 5}
+        - {x: 14, y: 9}
+        - {x: 8, y: 15}
+        - {x: 2, y: 15}
+        - {x: -3, y: 11}
+        - {x: -3, y: 7}
+        - {x: -4, y: 9}
+        - {x: -9, y: 13}
+        - {x: -11, y: 13}
+        - {x: -16, y: 9}
+        - {x: -16, y: -1}
+        - {x: -14, y: -6}
+        - {x: -12, y: -8}
+        - {x: -10, y: -8}
+        - {x: -14, y: -9}
+        - {x: -14, y: -15}
+        - {x: -13, y: -16}
+        - {x: -7, y: -16}
+        - {x: -5, y: -14}
+        - {x: -5, y: -11}
+      tessellationDetail: 1
+      bones: []
+      spriteID: b00e7f06d93fbae4d926b580fa28d56d
+      internalID: -2052749404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feldspar_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 12, y: -5}
+        - {x: 12, y: -2}
+        - {x: 10, y: 0}
+        - {x: 8, y: 0}
+        - {x: 2, y: 4}
+        - {x: 2, y: 3}
+        - {x: 3, y: 4}
+        - {x: 6, y: 2}
+        - {x: 9, y: 2}
+        - {x: 13, y: 6}
+        - {x: 13, y: 14}
+        - {x: 8, y: 16}
+        - {x: 4, y: 16}
+        - {x: 1, y: 14}
+        - {x: 0, y: 10}
+        - {x: -1, y: 11}
+        - {x: -3, y: 11}
+        - {x: -5, y: 9}
+        - {x: -9, y: 13}
+        - {x: -14, y: 13}
+        - {x: -16, y: 11}
+        - {x: -16, y: -4}
+        - {x: -13, y: -7}
+        - {x: -10, y: -8}
+        - {x: 0, y: -8}
+        - {x: -1, y: -9}
+        - {x: -1, y: -12}
+        - {x: 2, y: -15}
+        - {x: 7, y: -15}
+        - {x: 12, y: -10}
+        - {x: 12, y: -7}
+        - {x: 11, y: -6}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ec00e9250958125449ac13b386eb1eca
+      internalID: -38765670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feldspar_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -15, y: -9}
+        - {x: -15, y: -15}
+        - {x: -14, y: -16}
+        - {x: -8, y: -16}
+        - {x: -6, y: -14}
+        - {x: -7, y: -10}
+        - {x: -10, y: -7}
+      - - {x: 8, y: -4}
+        - {x: 5, y: -7}
+        - {x: 5, y: -13}
+        - {x: 8, y: -16}
+        - {x: 14, y: -16}
+        - {x: 16, y: -15}
+        - {x: 16, y: -4}
+      - - {x: 7, y: -3}
+        - {x: 7, y: 2}
+        - {x: 4, y: 5}
+        - {x: 10, y: 6}
+        - {x: 14, y: 10}
+        - {x: 14, y: 12}
+        - {x: 12, y: 14}
+        - {x: 11, y: 14}
+        - {x: 9, y: 16}
+        - {x: 4, y: 16}
+        - {x: 1, y: 13}
+        - {x: 1, y: 7}
+        - {x: 2, y: 6}
+        - {x: -2, y: 5}
+        - {x: -2, y: -1}
+        - {x: -1, y: -3}
+        - {x: -6, y: -5}
+        - {x: -7, y: -10}
+        - {x: -6, y: -13}
+        - {x: -2, y: -16}
+        - {x: 1, y: -16}
+        - {x: 5, y: -13}
+        - {x: 5, y: -8}
+        - {x: 3, y: -6}
+      - - {x: -6, y: 7}
+        - {x: -4, y: 9}
+        - {x: -4, y: 13}
+        - {x: -7, y: 16}
+        - {x: -12, y: 16}
+        - {x: -15, y: 14}
+        - {x: -16, y: 13}
+        - {x: -16, y: 6}
+        - {x: -14, y: 4}
+        - {x: -12, y: 4}
+        - {x: -13, y: 3}
+        - {x: -13, y: -4}
+        - {x: -11, y: -6}
+        - {x: -7, y: -6}
+        - {x: -3, y: -2}
+        - {x: -3, y: 2}
+        - {x: -6, y: 6}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 4797e2a96288b764ca1598550db59f81
+      internalID: -1145805778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 4b2c2ad5e263c3b43b0990635387d38e
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Feldspar_0: -2052749404
+      Feldspar_1: -38765670
+      Feldspar_2: -1145805778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
