@@ -9,6 +9,7 @@ using UnityEngine.Scripting.APIUpdating;
 using UnityEngine.Tilemaps;
 using System.Diagnostics;
 using System;
+using UnityEngine.SceneManagement;
 
 public class RoverController : MonoBehaviour
 {
@@ -551,16 +552,35 @@ public class RoverController : MonoBehaviour
         return;
     }
 
-    public void setSpawn(Vector3 coordinates)
+    public void setSpawn(Vector3 coordinates) // sets coordinates for rover returning to hubworld
     {
-        coordinates.y -= 2; // move slightly down from teleporter
+        coordinates.y -= 3; // move slightly down from teleporter
         caveCoordinates = coordinates;  //set coordinates for moveSpawn
     }
-
-    public void moveSpawn()
+     
+    public void moveSpawn() //moves the rover position to cavecoordinates
     {
         gameObject.transform.position = caveCoordinates;    // move rover to caveCooridnates
 
+        if(!rockIsNew) //if this is not the first load (since user has to pick up rock to exit hubworld)
+        {
+            setSpawnDirection(); //face down
+        }
+    }
+     
+    public void setSpawnDirection() //sets rover to face down on load, or up if in win cave
+    {
+        // set floats to "down" direction
+        animator.SetFloat("MovementX", 0);
+        animator.SetFloat("MovementY", -1);
+
+        //if in win cave, set floats to "up" direction
+        if (SceneManager.GetActiveScene().name == "CaveWin")
+        {
+            animator.SetFloat("MovementY", 1);
+        }
+
+        animator.Play(animationLevel + "Idle");
     }
 }
 

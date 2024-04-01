@@ -13,5 +13,6 @@ public class SetSpawnPoint : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Player");
         player.transform.position = spawnPoint;
+        player.GetComponent<RoverController>().setSpawnDirection();
     }
 }
