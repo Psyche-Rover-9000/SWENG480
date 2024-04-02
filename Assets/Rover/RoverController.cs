@@ -80,8 +80,9 @@ public class RoverController : MonoBehaviour
     private float verticalLock;
     private bool isPulling;
 
-    //list of coordinates for collected elements - used to destroy collected object upon scene reload
+    //list of coordinates for collected elements + breakable obstacles - used to destroy collected object upon scene reload
     public List<Vector3> elementCoordinates = new List<Vector3>();
+    public List<Vector3> obstacleCoordinates = new List<Vector3>();
 
     //coordinates near cave entrance that setSpawn() will move rover to anytime hub world loads
     private Vector3 caveCoordinates = new Vector3(-95.97f, -9.04f, 0); //initialize to spawn point for startup of the game
@@ -582,16 +583,7 @@ public class RoverController : MonoBehaviour
                 }
 
             }
-        }
-
-        /*
-        if (collision.gameObject.tag == "Pullable" && Input.GetKey(KeyCode.LeftShift))
-        {
-            boulder = collision.gameObject;
-            boulder.transform.SetParent(this.transform);
-        }
-        */
-        
+        }        
     }
 
     //prepares new element popup before specific element info appears
