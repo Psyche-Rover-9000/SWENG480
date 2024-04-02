@@ -20,6 +20,10 @@ public class RoverController : MonoBehaviour
     public GameObject triangleLeft;
     public GameObject triangleDown;
     public GameObject triangleUp;
+    public GameObject triangleUpRight;
+    public GameObject triangleUpLeft;
+    public GameObject triangleDownLeft;
+    public GameObject triangleDownRight;
     public AudioSource collectSFX;
     public float grabDistance = 1f;
     public LayerMask boulderMask;
@@ -155,6 +159,50 @@ public class RoverController : MonoBehaviour
             else
             {
                 triangleUp.SetActive(false);
+
+            }
+            if (rank.name.Contains("Up") && rank.name.Contains("Left"))
+            {
+                triangleUpLeft.SetActive(true);
+                triangleUp.SetActive(false);
+                triangleLeft.SetActive(false);
+            }
+            else
+            {
+                triangleUpLeft.SetActive(false);
+
+            }
+            if (rank.name.Contains("Up") && rank.name.Contains("Right"))
+            {
+                triangleUpRight.SetActive(true);
+                triangleUp.SetActive(false);
+                triangleRight.SetActive(false);
+            }
+            else
+            {
+                triangleUpRight.SetActive(false);
+
+            }
+            if (rank.name.Contains("Down") && rank.name.Contains("Left"))
+            {
+                triangleDownLeft.SetActive(true);
+                triangleDown.SetActive(false);
+                triangleLeft.SetActive(false);
+            }
+            else
+            {
+                triangleDownLeft.SetActive(false);
+
+            }
+            if (rank.name.Contains("Down") && rank.name.Contains("Right"))
+            {
+                triangleDownRight.SetActive(true);
+                triangleDown.SetActive(false);
+                triangleRight.SetActive(false);
+            }
+            else
+            {
+                triangleDownRight.SetActive(false);
 
             }
         }
