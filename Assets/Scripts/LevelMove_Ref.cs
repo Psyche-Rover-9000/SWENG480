@@ -17,10 +17,10 @@ public class LevelMove_Ref : MonoBehaviour
         // Tags work too. Maybe some players have different script components?
         if (other.tag == "Player")
         {
-            //if in hub world
-            if (SceneManager.GetActiveScene().name == "HubWorld")
+            //if in hub world or cave 4 (scenes with multiple cave entrances)
+            if (SceneManager.GetActiveScene().name == "HubWorld" || SceneManager.GetActiveScene().name == "Cave4")
             {
-                other.GetComponentInParent<RoverController>().setSpawn(gameObject.transform.position);  // set spawn in rover controller for when returning to hub world
+                other.GetComponentInParent<RoverController>().setSpawn(gameObject.transform.position);  // set spawn in rover controller for when returning to hub world/cave 4
             }
 
             // Player entered, so move level

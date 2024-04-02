@@ -80,11 +80,15 @@ public class RoverController : MonoBehaviour
     private float verticalLock;
     private bool isPulling;
 
-    //list of coordinates for collected elements - used to destroy collected object upon scene reload
+    //list of coordinates for collected elements + breakable obstacles - used to destroy collected object upon scene reload
     public List<Vector3> elementCoordinates = new List<Vector3>();
+    public List<Vector3> obstacleCoordinates = new List<Vector3>();
 
     //coordinates near cave entrance that setSpawn() will move rover to anytime hub world loads
     private Vector3 caveCoordinates = new Vector3(-95.97f, -9.04f, 0); //initialize to spawn point for startup of the game
+
+    //coordinates near cave entrance that setSpawn() will move rover to anytime cave 4 loads
+    private Vector3 cave4Coordinates = new Vector3(-1.46f, -47.84f, 0); //initialize to cave 4 entrance from hub world
 
     //creates an instance of the player rover
     private static RoverController roverInstance = null;
@@ -579,16 +583,7 @@ public class RoverController : MonoBehaviour
                 }
 
             }
-        }
-
-        /*
-        if (collision.gameObject.tag == "Pullable" && Input.GetKey(KeyCode.LeftShift))
-        {
-            boulder = collision.gameObject;
-            boulder.transform.SetParent(this.transform);
-        }
-        */
-        
+        }        
     }
 
     //prepares new element popup before specific element info appears
@@ -603,19 +598,36 @@ public class RoverController : MonoBehaviour
     public void setSpawn(Vector3 coordinates) // sets coordinates for rover returning to hubworld
     {
         coordinates.y -= 3; // move slightly down from teleporter
-        caveCoordinates = coordinates;  //set coordinates for moveSpawn
-    }
-     
-    public void moveSpawn() //moves the rover position to cavecoordinates
-    {
-        gameObject.transform.position = caveCoordinates;    // move rover to caveCooridnates
 
-        if(!rockIsNew) //if this is not the first load (since user has to pick up rock to exit hubworld)
+        if (SceneManager.GetActiveScene().name == "HubWorld")
         {
-            setSpawnDirection(); //face down
+            caveCoordinates = coordinates;  //set hub world coordinates for moveSpawn
+        }
+        else if (SceneManager.GetActiveScene().name == "Cave4")
+        {
+            cave4Coordinates = coordinates; //set cave 4 coordinates for moveSPawn
         }
     }
-     
+
+    public void moveSpawn() //moves the rover position to cavecoordinates
+    {
+        if (SceneManager.GetActiveScene().name == "HubWorld")
+        {
+            gameObject.transform.position = caveCoordinates;    // move rover to caveCooridnates
+
+            //rover should face up on first load of game, but down after exiting any other cave into hub world
+            if (!rockIsNew) //if this is not the first load (since user has to pick up rock to exit hubworld)
+            {
+                setSpawnDirection(); //face down
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Cave4")
+        {
+            gameObject.transform.position = cave4Coordinates;    // move rover to cave4Cooridnates
+            setSpawnDirection(); // face down
+        }
+    }
+
     public void setSpawnDirection() //sets rover to face down on load, or up if in win cave
     {
         // set floats to "down" direction
