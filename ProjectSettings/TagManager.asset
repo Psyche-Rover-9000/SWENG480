@@ -10,6 +10,7 @@ TagManager:
   - Breakable
   - Pullable
   - LevelMove
+  - Journal
   layers:
   - Default
   - TransparentFX

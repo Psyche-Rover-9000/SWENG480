@@ -10,6 +10,7 @@ using UnityEngine.Tilemaps;
 using System.Diagnostics;
 using System;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class RoverController : MonoBehaviour
 {
@@ -24,11 +25,12 @@ public class RoverController : MonoBehaviour
     public GameObject triangleUpLeft;
     public GameObject triangleDownLeft;
     public GameObject triangleDownRight;
+    public GameObject journal;
     public AudioSource collectSFX;
     public float grabDistance = 1f;
     public LayerMask boulderMask;
     public SpriteMask flashlight;
-
+    private int numberOfPages = 1;
     // rover objects and settings
     private Rigidbody2D rover;
     private float speed_init;
@@ -243,11 +245,15 @@ public class RoverController : MonoBehaviour
             if (!PopUp.popUpElementActive)
             {
                 if (!PopUp.popUpUpgradeActive)
-                {
-                    Move();
+                { if (!PopUp.popUpFactsActive)
+                    {
+                        Move();
+                    }
+                    
                 }
             }
         }
+        
     }
 
     /*
@@ -387,7 +393,7 @@ public class RoverController : MonoBehaviour
 
                 //new upgrade pop up + pause menu
                 if (score.getScore() >= level2 && !boostUnlocked) //boost unlocked when score is 10
-                {  
+                {
 
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
@@ -405,6 +411,7 @@ public class RoverController : MonoBehaviour
                     popUpPanel.transform.parent.Find("PausePanel").Find("UpgradeInfo").Find("UnlockedUpgradesText").Find("BoostInfo").gameObject.SetActive(true);
 
                 }
+
                 if (score.getScore() >= level3 && !transmitterUnlocked) //transmitter unlocked when score is 20***
                 {
                     //pop up
@@ -583,15 +590,51 @@ public class RoverController : MonoBehaviour
                 }
 
             }
-        }        
-    }
+        }
+        if (collision.gameObject.tag == "Journal")
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                collision.gameObject.GetComponent<FactBookScript>().getFact();
+                switch (numberOfPages)
+                {
+                    case 1:
+                        {
+                            newJournalPopUp();
+                            journal.transform.Find("Fact1").gameObject.SetActive(true);
+                            numberOfPages++;
+                            Debug.Log(numberOfPages);
+                            break;
 
+                        }
+                    case 2:
+                       
+                        {
+                            Debug.Log(numberOfPages);
+                            newJournalPopUp();
+                            journal.transform.Find("Fact2").gameObject.SetActive(true);
+                            numberOfPages++;
+                            break;
+                        }
+                }
+           
+            }
+        }
+    }
     //prepares new element popup before specific element info appears
     private void newElementPopUp()
     {
         PopUp.popUpElementActive = true; //pauses controls
         popUpPanel.gameObject.SetActive(true); //pop up appears
         popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
+        return;
+    }
+
+    private void newJournalPopUp()
+    {
+        PopUp.popUpFactsActive = true; //pauses controls
+        journal.gameObject.SetActive(true); //pop up appears
+        
         return;
     }
 

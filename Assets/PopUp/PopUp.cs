@@ -6,6 +6,7 @@ public class PopUp : MonoBehaviour
 {
     public static bool popUpElementActive;
     public static bool popUpUpgradeActive;
+    public static bool popUpFactsActive;
     public GameObject popUp;
 
     public void clickOK() //closes the popup
@@ -24,6 +25,13 @@ public class PopUp : MonoBehaviour
 
             //mark element pop up ad closed
             popUpElementActive = false;
+        }else if(popUp.name == "PopUpPanelFacts")
+        {
+            popUp.transform.Find("Fact1").gameObject.SetActive(false);
+            popUp.transform.Find("Fact2").gameObject.SetActive(false);
+           
+            //mark element pop up ad closed
+            popUpFactsActive = false;
         }
         else if (popUp.name == "UpgradePopUp") // if upgrade pop up, not element pop up
         {
