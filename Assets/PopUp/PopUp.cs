@@ -29,7 +29,10 @@ public class PopUp : MonoBehaviour
         {
             popUp.transform.Find("Fact1").gameObject.SetActive(false);
             popUp.transform.Find("Fact2").gameObject.SetActive(false);
-           
+            popUp.transform.Find("Fact3").gameObject.SetActive(false);
+            popUp.transform.Find("Fact4").gameObject.SetActive(false);
+            popUp.transform.Find("Fact5").gameObject.SetActive(false);
+
             //mark element pop up ad closed
             popUpFactsActive = false;
         }

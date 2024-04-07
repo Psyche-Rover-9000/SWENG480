@@ -610,9 +610,36 @@ public class RoverController : MonoBehaviour
                     case 2:
                        
                         {
-                            Debug.Log(numberOfPages);
+                            
                             newJournalPopUp();
                             journal.transform.Find("Fact2").gameObject.SetActive(true);
+                            numberOfPages++;
+                            break;
+                        }
+                    case 3:
+
+                        {
+                            
+                            newJournalPopUp();
+                            journal.transform.Find("Fact3").gameObject.SetActive(true);
+                            numberOfPages++;
+                            break;
+                        }
+                    case 4:
+
+                        {
+                            
+                            newJournalPopUp();
+                            journal.transform.Find("Fact4").gameObject.SetActive(true);
+                            numberOfPages++;
+                            break;
+                        }
+                    case 5:
+
+                        {
+                            
+                            newJournalPopUp();
+                            journal.transform.Find("Fact5").gameObject.SetActive(true);
                             numberOfPages++;
                             break;
                         }
