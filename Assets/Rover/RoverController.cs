@@ -30,7 +30,8 @@ public class RoverController : MonoBehaviour
     public float grabDistance = 1f;
     public LayerMask boulderMask;
     public SpriteMask flashlight;
-    private int numberOfPages = 1;
+    public int numberOfPages = 1;
+    public GameObject NASABase;
 
     // rover objects and settings
     private Rigidbody2D rover;
@@ -255,8 +256,7 @@ public class RoverController : MonoBehaviour
                     
                 }
             }
-        }
-        
+        }       
     }
 
     /*
@@ -598,60 +598,87 @@ public class RoverController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                //store coordinates of the collected element to list
-                Vector3 coordinates = collision.gameObject.GetComponent<FactBookScript>().getCoordinates();
-                journalCoordinates.Add(coordinates);
-
-                //collect journal
-                collision.gameObject.GetComponent<FactBookScript>().getFact(); 
-
-                switch (numberOfPages)
+                if (collision.gameObject.name == "NASAFactBook") //if reading nasa journal
                 {
-                    case 1:
-                        {
-                            newJournalPopUp();
-                            journal.transform.Find("Fact1").gameObject.SetActive(true);
-                            numberOfPages++;
-                            Debug.Log(numberOfPages);
-                            break;
+                    newJournalPopUp(); //pause controls and activate popup
 
-                        }
-                    case 2:
-                       
-                        {
-                            
-                            newJournalPopUp();
-                            journal.transform.Find("Fact2").gameObject.SetActive(true);
-                            numberOfPages++;
-                            break;
-                        }
-                    case 3:
+                    if (numberOfPages > 1) // if user has found any pages, open journal to fact 1. otherwise, initial text is shown
+                    {
+                        journal.transform.Find("Fact1").gameObject.SetActive(true);
+                    }
 
-                        {
-                            
-                            newJournalPopUp();
-                            journal.transform.Find("Fact3").gameObject.SetActive(true);
-                            numberOfPages++;
-                            break;
-                        }
-                    case 4:
+                    //set text objects for nasa journal
+                    journal.transform.Find("NewJournalTipText").gameObject.SetActive(false);
+                    journal.transform.Find("NewFactText").gameObject.SetActive(false);
+                    journal.transform.Find("RereadFactText").gameObject.SetActive(true);
 
-                        {
-                            
-                            newJournalPopUp();
-                            journal.transform.Find("Fact4").gameObject.SetActive(true);
-                            numberOfPages++;
-                            break;
-                        }
-                    case 5:
+                    //switch buttons
+                    journal.transform.Find("OKButton").gameObject.SetActive(false);
+                    journal.transform.Find("CloseJournalButton").gameObject.SetActive(true);
 
-                        {
-                            
-                            newJournalPopUp();
-                            journal.transform.Find("Fact5").gameObject.SetActive(true);
-                            numberOfPages++;
-                            break;
-                        }
+                    if (numberOfPages > 2) //if user has collected more than one page, show next button
+                    {
+                        journal.transform.Find("NextButton").gameObject.SetActive(true);
+                    }
+
+                }
+                else //if picking up new journal
+                { 
+                    //store coordinates of the collected element to list
+                    Vector3 coordinates = collision.gameObject.GetComponent<FactBookScript>().getCoordinates();
+                    journalCoordinates.Add(coordinates);
+
+                    //collect journal
+                    collision.gameObject.GetComponent<FactBookScript>().getFact();
+
+                    switch (numberOfPages)
+                    {
+                        case 1:
+                            {
+                                newJournalPopUp();
+                                journal.transform.Find("InitialText").gameObject.SetActive(false);
+                                journal.transform.Find("Fact1").gameObject.SetActive(true);
+                                numberOfPages++;
+                                break;
+
+                            }
+                        case 2:
+
+                            {
+
+                                newJournalPopUp();
+                                journal.transform.Find("Fact2").gameObject.SetActive(true);
+                                numberOfPages++;
+                                break;
+                            }
+                        case 3:
+
+                            {
+
+                                newJournalPopUp();
+                                journal.transform.Find("Fact3").gameObject.SetActive(true);
+                                numberOfPages++;
+                                break;
+                            }
+                        case 4:
+
+                            {
+
+                                newJournalPopUp();
+                                journal.transform.Find("Fact4").gameObject.SetActive(true);
+                                numberOfPages++;
+                                break;
+                            }
+                        case 5:
+
+                            {
+
+                                newJournalPopUp();
+                                journal.transform.Find("Fact5").gameObject.SetActive(true);
+                                numberOfPages++;
+                                break;
+                            }
+                    }
                 }
            
             }
