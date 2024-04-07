@@ -31,6 +31,7 @@ public class RoverController : MonoBehaviour
     public LayerMask boulderMask;
     public SpriteMask flashlight;
     private int numberOfPages = 1;
+
     // rover objects and settings
     private Rigidbody2D rover;
     private float speed_init;
@@ -85,6 +86,7 @@ public class RoverController : MonoBehaviour
     //list of coordinates for collected elements + breakable obstacles - used to destroy collected object upon scene reload
     public List<Vector3> elementCoordinates = new List<Vector3>();
     public List<Vector3> obstacleCoordinates = new List<Vector3>();
+    public List<Vector3> journalCoordinates = new List<Vector3>();
 
     //coordinates near cave entrance that setSpawn() will move rover to anytime hub world loads
     private Vector3 caveCoordinates = new Vector3(-95.97f, -9.04f, 0); //initialize to spawn point for startup of the game
@@ -245,7 +247,8 @@ public class RoverController : MonoBehaviour
             if (!PopUp.popUpElementActive)
             {
                 if (!PopUp.popUpUpgradeActive)
-                { if (!PopUp.popUpFactsActive)
+                { 
+                    if (!PopUp.popUpFactsActive)
                     {
                         Move();
                     }
@@ -595,7 +598,13 @@ public class RoverController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                collision.gameObject.GetComponent<FactBookScript>().getFact();
+                //store coordinates of the collected element to list
+                Vector3 coordinates = collision.gameObject.GetComponent<FactBookScript>().getCoordinates();
+                journalCoordinates.Add(coordinates);
+
+                //collect journal
+                collision.gameObject.GetComponent<FactBookScript>().getFact(); 
+
                 switch (numberOfPages)
                 {
                     case 1:

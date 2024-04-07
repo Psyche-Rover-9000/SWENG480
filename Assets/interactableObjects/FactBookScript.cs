@@ -7,6 +7,8 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class FactBookScript : MonoBehaviour
 {
+    List<Vector3> journalCoordinates; // coordinates of collected journals
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,20 @@ public class FactBookScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void Awake()
+    {
+        GameObject rover = GameObject.FindWithTag("Player");
+        journalCoordinates = rover.GetComponent<RoverController>().journalCoordinates; // get list of coordinates of already collected journals from rover 
+
+        foreach (Vector3 coordinates in journalCoordinates) //for each set of coordinates from collected journals
+        {
+            if (gameObject.transform.position == coordinates) //if element from that position has already been collected, delete it
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -31,5 +47,10 @@ public class FactBookScript : MonoBehaviour
     {
         gameObject.SetActive(false);
        
+    }
+
+    public Vector3 getCoordinates()
+    {
+        return gameObject.transform.position; //return this element's coordinates
     }
 }
