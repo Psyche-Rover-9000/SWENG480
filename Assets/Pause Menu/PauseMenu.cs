@@ -7,7 +7,6 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject popUp;
-    public GameObject settingsMenu;
     public static bool isPaused;
 
     //creates an instance of the pause menu
@@ -63,7 +62,6 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("PsycheRover9000");
         ResumeGame();
-        settingsMenu.SetActive(true);
     }
 
     public void ElementInfo()
