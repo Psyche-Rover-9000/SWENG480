@@ -14,4 +14,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Credits"); //load Credits
     }
+
+    public void settings() //open settings
+    {
+        gameObject.SetActive(false); //close main menu
+    }
 }

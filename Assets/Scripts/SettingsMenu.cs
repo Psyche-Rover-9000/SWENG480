@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public GameObject settingsMenu;
+    public GameObject mainMenu;
 
     //creates an instance of the settings menu
-    private static SettingsMenu settingsInstance = null;
+    /*private static SettingsMenu settingsInstance = null;
     private void Awake()
     {
         if (settingsInstance == null)
@@ -19,21 +19,10 @@ public class SettingsMenu : MonoBehaviour
         }
         Destroy(this.gameObject); //destroy duplicate settings menu objects when returning to MainWorld
 
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        settingsMenu.SetActive(false);
-    }
+    }*/
 
     public void Back()
     {
-        settingsMenu.SetActive(false);
-    }
-
-    public void GoToSettings()
-    {
-        settingsMenu.SetActive(true);
+        mainMenu.SetActive(true); //reopen main menu
     }
 }
