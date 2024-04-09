@@ -2916,6 +2916,8 @@ MonoBehaviour:
   mutedMusic: {fileID: 1976570980}
   sfxImage: {fileID: 1437440532}
   mutedSFX: {fileID: 2080288780}
+  musicSlider: {fileID: 1268013118}
+  sfxSlider: {fileID: 1525717727}
 --- !u!114 &1268013118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3352,6 +3354,8 @@ MonoBehaviour:
   mutedMusic: {fileID: 1976570980}
   sfxImage: {fileID: 1437440532}
   mutedSFX: {fileID: 2080288780}
+  musicSlider: {fileID: 1268013118}
+  sfxSlider: {fileID: 1525717727}
 --- !u!114 &1525717727
 MonoBehaviour:
   m_ObjectHideFlags: 0

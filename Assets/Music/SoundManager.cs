@@ -7,10 +7,15 @@ using UnityEngine.UI;
 public class Music : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
+
     public Image musicImage;
     public Image mutedMusic;
     public Image sfxImage;
     public Image mutedSFX;
+
+    public Slider musicSlider;
+    public Slider sfxSlider;
+    float value;
 
     public void setVolumeMusic(float sliderValue)
     {
@@ -43,6 +48,22 @@ public class Music : MonoBehaviour
         {
             mutedSFX.gameObject.SetActive(false);
             sfxImage.gameObject.SetActive(true);
+        }
+    }
+
+    private void Start()
+    {
+        //set slider to correct value based on volume (maintains slider position between scenes)
+        bool result = audioMixer.GetFloat("MusicVolume", out value);
+        if (result)
+        {
+            musicSlider.value = Mathf.Pow(10, (value / 20));
+        }
+
+        result = audioMixer.GetFloat("SFXVolume", out value);
+        if (result)
+        {
+            sfxSlider.value = Mathf.Pow(10, (value / 20));
         }
     }
 }
