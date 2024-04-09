@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {   
     public void play() // load game
     {
-        SceneManager.LoadScene("HubWorld"); //load main world scene
+        SceneManager.LoadScene("Exposition"); //load exposition scene (which leads to hub world)
     }
 
     public void credits() // load credits scene
