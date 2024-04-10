@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaveWin.unity
     guid: 8f806974c21df6241ae5f89acd098195
+  - enabled: 1
+    path: Assets/Scenes/Exposition.unity
+    guid: 508410f7aba8ed042869eb84b3c4f94e
   m_configObjects: {}
