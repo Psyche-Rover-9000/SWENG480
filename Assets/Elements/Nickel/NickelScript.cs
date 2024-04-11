@@ -9,7 +9,7 @@ public class NickelScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 5;
+        value = 100;
         GenerateRandomVariance();
     }
 

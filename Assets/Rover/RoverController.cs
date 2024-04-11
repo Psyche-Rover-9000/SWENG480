@@ -46,10 +46,10 @@ public class RoverController : MonoBehaviour
     private float horizontal;
     private float vertical;
     private float angle;
-    private int level2 = 10;
-    private int level3 = 20;
-    private int level4 = 40;
-    private int level5 = 80;
+    private int level2 = 100;
+    private int level3 = 500;
+    private int level4 = 1250;
+    private int level5 = 7500;
 
     //pop up related objects and variables
     public GameObject popUpPanel;
@@ -471,7 +471,7 @@ public class RoverController : MonoBehaviour
                 //new element pop ups + pause menu
                 switch (val) //switch determines which element was just picked up
                 {
-                    case 2: // rock was picked up
+                    case 20: // rock was picked up
                         {
                             if (rockIsNew) //pop ups only appear the first time an element is picked up
                             {
@@ -486,7 +486,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 3: // mica was picked up
+                    case 375: // mica was picked up
                         {
                             if (micaIsNew) //pop ups only appear the first time an element is picked up
                             {
@@ -501,7 +501,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 4: // iron was picked up
+                    case 75: // iron was picked up
                         {
                             if (ironIsNew) //pop ups only appear the first time an element is picked up
                             {
@@ -516,7 +516,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 5: // nickel was picked up
+                    case 100: // nickel was picked up
                         {
                             if (nickelIsNew)
                             {
@@ -531,7 +531,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 8: // olivine was picked up
+                    case 225: // olivine was picked up
                         {
                             if (olivineIsNew)
                             {
@@ -546,7 +546,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 9: // feldspar was picked up
+                    case 150: // feldspar was picked up
                         {
                             if (feldsparIsNew) //pop ups only appear the first time an element is picked up
                             {
@@ -561,7 +561,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 10: // pyroxene was picked up
+                    case 750: // pyroxene was picked up
                         {
                             if (pyroxeneIsNew)
                             {
@@ -576,7 +576,7 @@ public class RoverController : MonoBehaviour
                             break;
                         }
 
-                    case 15: // quartz was picked up
+                    case 500: // quartz was picked up
                         {
                             if (quartzIsNew)
                             {

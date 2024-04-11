@@ -9,7 +9,7 @@ public class OlivineScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 8;
+        value = 225;
         GenerateRandomVariance();
     }
 

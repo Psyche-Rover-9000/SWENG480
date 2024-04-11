@@ -9,7 +9,7 @@ public class PyroxeneScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 10;
+        value = 750;
         GenerateRandomVariance();
     }
 

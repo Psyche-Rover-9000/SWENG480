@@ -9,7 +9,7 @@ public class IronScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 4;
+        value = 75;
         GenerateRandomVariance();
     }
 

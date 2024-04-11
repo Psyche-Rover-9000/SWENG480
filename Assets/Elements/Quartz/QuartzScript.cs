@@ -9,7 +9,7 @@ public class QuartzScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 15;
+        value = 500;
         GenerateRandomVariance();
     }
 

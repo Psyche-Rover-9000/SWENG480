@@ -9,7 +9,7 @@ public class RockScript : GenericElement
     // Start is called before the first frame update
     void Start()
     {
-        value = 2;
+        value = 20;
         GenerateRandomVariance();
     }
 
