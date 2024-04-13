@@ -252,8 +252,7 @@ public class RoverController : MonoBehaviour
                     if (!PopUp.popUpFactsActive)
                     {
                         Move();
-                    }
-                    
+                    }   
                 }
             }
         }       
@@ -400,6 +399,7 @@ public class RoverController : MonoBehaviour
 
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
+                    rover.velocity = Vector2.zero; //freeze rover velocity
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
                     upgradePopUp.transform.Find("BoostInfo").gameObject.SetActive(true); //boost related info on pop up appears 
                     boostUnlocked = true;
@@ -419,6 +419,7 @@ public class RoverController : MonoBehaviour
                 {
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
+                    rover.velocity = Vector2.zero; //freeze rover velocity
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
                     upgradePopUp.transform.Find("TransmitterInfo").gameObject.SetActive(true); //transmitter related info on pop up appears 
                     transmitterUnlocked = true;
@@ -436,6 +437,7 @@ public class RoverController : MonoBehaviour
                 {
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
+                    rover.velocity = Vector2.zero; //freeze rover velocity
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
                     upgradePopUp.transform.Find("FlashlightInfo").gameObject.SetActive(true); //flashlight related info on pop up appears 
                     flashlightUnlocked = true;
@@ -453,6 +455,7 @@ public class RoverController : MonoBehaviour
                 {
                     //pop up
                     PopUp.popUpUpgradeActive = true; //pauses controls
+                    rover.velocity = Vector2.zero; //freeze rover velocity
                     upgradePopUp.gameObject.SetActive(true); //pop up appears
                     upgradePopUp.transform.Find("GrabberInfo").gameObject.SetActive(true); //grabber claw related info on pop up appears 
                     grabberUnlocked = true;
@@ -688,6 +691,7 @@ public class RoverController : MonoBehaviour
     private void newElementPopUp()
     {
         PopUp.popUpElementActive = true; //pauses controls
+        rover.velocity = Vector2.zero; //freeze rover velocity
         popUpPanel.gameObject.SetActive(true); //pop up appears
         popUpPanel.transform.Find("NewElementText").gameObject.SetActive(true); //new element text appears
         return;
@@ -696,6 +700,7 @@ public class RoverController : MonoBehaviour
     private void newJournalPopUp()
     {
         PopUp.popUpFactsActive = true; //pauses controls
+        rover.velocity = Vector2.zero; //freeze rover velocity
         journal.gameObject.SetActive(true); //pop up appears
         
         return;
