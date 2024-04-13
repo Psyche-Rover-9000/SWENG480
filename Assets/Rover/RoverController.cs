@@ -72,7 +72,7 @@ public class RoverController : MonoBehaviour
     public TextMeshProUGUI currentScoreText;
     public TextMeshProUGUI scoreNeededText;
     public Image fill;
-    public int scoreNeeded = 10; //initialized for first upgrade (boost)
+    public int scoreNeeded = 100; //initialized for first upgrade (boost)
 
     //upgrades in pause menu objects and variables
     public TextMeshProUGUI nextUpgradeText;
@@ -390,7 +390,7 @@ public class RoverController : MonoBehaviour
 
                 if (score.getScore() < level5) // maximum upgrade score
                 {
-                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Points Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
                 }
 
@@ -406,7 +406,7 @@ public class RoverController : MonoBehaviour
 
                     //change progress bar goal for next upgrade
                     scoreNeeded = level3;
-                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Points Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
                     //update upgrades in pause menu
@@ -425,7 +425,7 @@ public class RoverController : MonoBehaviour
 
                     //change progress bar goal for next upgrade
                     scoreNeeded = level4;
-                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Points Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
                     //update upgrades in pause menu
@@ -442,7 +442,7 @@ public class RoverController : MonoBehaviour
 
                     //change progress bar goal for next upgrade
                     scoreNeeded = level5;
-                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Point(s) Needed to Upgrade!";
+                    scoreNeededText.text = $"{scoreNeeded - score.getScore()} Points Needed to Upgrade!";
                     fill.fillAmount = (float)score.getScore() / scoreNeeded;
 
                     //update upgrades in pause menu
