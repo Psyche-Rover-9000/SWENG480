@@ -87,7 +87,6 @@
     <Compile Include="Assets\Pause Menu\PauseMenu.cs" />
     <Compile Include="Assets\PopUp\PopUp.cs" />
     <Compile Include="Assets\Scripts\SettingsMenuPause.cs" />
-    <Compile Include="Assets\Scenes\DarknessBlocker.cs" />
     <Compile Include="Assets\Elements\RandomObject.cs" />
     <Compile Include="Assets\HubWorldLoad.cs" />
   </ItemGroup>
