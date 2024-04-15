@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
     <Compile Include="Assets\Elements\GenericElement.cs" />
     <Compile Include="Assets\Music\SoundManager.cs" />
+    <Compile Include="Assets\DarknessBlockerScript.cs" />
     <Compile Include="Assets\Scripts\ExpositionScript.cs" />
     <Compile Include="Assets\Elements\Pyroxene\PyroxeneScript.cs" />
     <Compile Include="Assets\interactableObjects\DestroyObstacle.cs" />
