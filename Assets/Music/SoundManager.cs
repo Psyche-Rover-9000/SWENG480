@@ -51,7 +51,7 @@ public class Music : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Update()
     {
         //set slider to correct value based on volume (maintains slider position between scenes)
         bool result = audioMixer.GetFloat("MusicVolume", out value);
